@@ -6,6 +6,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { RegiterComponent } from './components/regiter/regiter.component';
 import { DashComponent } from './components/dash/dash.component';
 import { NavComponent } from './components/nav/nav.component';
+import { EnfermedadComponent } from './components/enfermedad/enfermedad.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full',
   },
+  
   {
     path: 'home',
     component: NavComponent,
@@ -42,6 +44,14 @@ const routes: Routes = [
         path: 'estadisticas', component: DashComponent 
       },
     ],
+  },
+  {
+    path: 'homec',
+    component: HomeComponent,
+  },
+  {
+    path: 'control/:id',
+    component: EnfermedadComponent,
   },
 ];
 

@@ -25,7 +25,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
-import { NgChartsModule } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts'; 
 import { DashComponent } from './components/dash/dash.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
@@ -33,6 +33,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NavComponent } from './components/nav/nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { EnfermedadComponent } from './components/enfermedad/enfermedad.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MatListModule } from '@angular/material/list';
     HomeComponent,
     MainPageComponent,
     DashComponent,
-    NavComponent
+    NavComponent,
+    EnfermedadComponent
   ],
   imports: [
     BrowserModule,
