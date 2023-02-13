@@ -1,11 +1,16 @@
 export class RegisterData {
 
     constructor(
-        public username: string,
         public contrasena: string,
         public nombre: string,
         public correo: string,
-        public nacionalidad: string,
-        public idTipoUsuario: number
+        public altura: number,
+        public peso: number,
+        public fechaNacimiento: string, 
+        public enfermedad1: boolean,
+        public enfermedad2: boolean,
+        public enfermedad3: boolean
+
+
     ){}
 }

@@ -8,25 +8,43 @@
                 <h1 class="font-weight-bold text-center title">ss</h1>
 
             </div>
+            <!-- nombre -->
             <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="registerData.nombre" name="Nombre" />
-            <input class="form-control" type="text" placeholder="Nombre Usuario" [(ngModel)]="registerData.username" name="Nombre Usuario" />
-            <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="registerData.contrasena" name="Contraseña" />
+            <!--  -->
             <input class="form-control" type="email" placeholder="Email" [(ngModel)]="registerData.correo" name="Email" />
-            <input class="form-control" type="text" placeholder="Nacionalidad" [(ngModel)]="registerData.nacionalidad" name="Nacionalidad" />
-            <select class="form-select form-control" [(ngModel)]="registerData.idTipoUsuario">
-          <option selected>Tipo de Usuario ...</option>
-          <option value="1">Chef</option>
-          <option value="2">Miembro</option>
-        </select>
 
-            <button class="btn btn-primary btnC" type="submit" role="button">
-          Registrarse
-        </button>
+            <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="registerData.contrasena" name="Contraseña" />
+            <!--fecha nacimiento  -->
+            <div class="form-group row mb-1">
+                <label for="fechaInicio" class="col-sm-2 col-form-label">Fecha Nacimiento</label
+                >
+                <div class="col-sm-6">
+                  <input
+                    type="date"
+                    name="begin"
+                    value="registerData.fechaNacimiento"
+                    name="fechaNacimiento"
+                    [(ngModel)]="registerData.fechaNacimiento"
+                  />
+                </div>
+              </div>
+            <!-- altura -->
+            <input class="form-control" type="number"
+            name="meters"
+            step="0.01"
+            min="1"
+            placeholder="e.g. 1.78"
+            requiredplaceholder="Altura" [(ngModel)]="registerData.altura" name="Altura" />
+            <!-- peso -->
+            <input class="form-control" type="number" placeholder="Peso" [(ngModel)]="registerData.peso" name="Peso" />
+            <!-- enfermedades -->
+            <input type="radio" #radioInput [(ngModel)]="registerData.enfermedad1" [value]="true" name="something"/>    
+            <input type="radio" [(ngModel)]="registerData.enfermedad2" [value]="true" name="something1"/>    
+            <input type="radio" [(ngModel)]="registerData.enfermedad3" [value]="true" name="something2"/>    
 
-            <div>
-                <p>¿Ya tienes una cuenta? Inicia sesión aqui:</p>
-                <a class="nav-link" [routerLink]="['/login']">Inicia Sesión</a>
-            </div>
+            <button class="btn btn-primary btnC" (click)="registraUsuario()"role="button">Registrarse
+            </button>
+          
         </form>
     </div>
 </div>

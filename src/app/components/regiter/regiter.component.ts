@@ -7,6 +7,10 @@ import { RegisterData } from 'src/app/models/register-data';
   styleUrls: ['./regiter.component.css']
 })
 export class RegiterComponent {
-  registerData: RegisterData = new RegisterData('','','','','',1);
+  registerData: RegisterData = new RegisterData('','','',0,0,'',false,false,false);
 
+  registraUsuario(){
+    console.log(this.registerData)
+  }
 }
+ 
