@@ -1,50 +1,118 @@
 <div class="register-page">
-    <div class="form">
-        <form class="login-form" appearance="fill" fxFlexFill>
-            <div>
-                <img src="../../../favicon.ico" alt="Logo" class="img" />
-            </div>
-            <div>
-                <h1 class="font-weight-bold text-center title">ss</h1>
+  <div class="form">
+    <form class="login-form" appearance="fill" fxFlexFill>
+      <div>
+        <img src="../../../favicon.ico" alt="Logo" class="img" />
+      </div>
+      <div>
+        <h1 class="font-weight-bold text-center title">Check&Health</h1>
+      </div>
 
-            </div>
-            <!-- nombre -->
-            <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="registerData.nombre" name="Nombre" />
-            <!--  -->
-            <input class="form-control" type="email" placeholder="Email" [(ngModel)]="registerData.correo" name="Email" />
+      <div>
+        <h2 class="font-weight-bold text-center title">Registrate</h2>
+      </div>
+      <!-- nombre -->
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Nombre"
+        [(ngModel)]="registerData.nombre"
+        name="Nombre"
+      />
+      <!--  -->
+      <input
+        class="form-control"
+        type="email"
+        placeholder="Email"
+        [(ngModel)]="registerData.correo"
+        name="Email"
+      />
 
-            <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="registerData.contrasena" name="Contraseña" />
-            <!--fecha nacimiento  -->
-            <div class="form-group row mb-1">
-                <label for="fechaInicio" class="col-sm-2 col-form-label">Fecha Nacimiento</label
-                >
-                <div class="col-sm-6">
-                  <input
-                    type="date"
-                    name="begin"
-                    value="registerData.fechaNacimiento"
-                    name="fechaNacimiento"
-                    [(ngModel)]="registerData.fechaNacimiento"
-                  />
-                </div>
-              </div>
-            <!-- altura -->
-            <input class="form-control" type="number"
-            name="meters"
-            step="0.01"
-            min="1"
-            placeholder="e.g. 1.78"
-            requiredplaceholder="Altura" [(ngModel)]="registerData.altura" name="Altura" />
-            <!-- peso -->
-            <input class="form-control" type="number" placeholder="Peso" [(ngModel)]="registerData.peso" name="Peso" />
-            <!-- enfermedades -->
-            <input type="radio" #radioInput [(ngModel)]="registerData.enfermedad1" [value]="true" name="something"/>    
-            <input type="radio" [(ngModel)]="registerData.enfermedad2" [value]="true" name="something1"/>    
-            <input type="radio" [(ngModel)]="registerData.enfermedad3" [value]="true" name="something2"/>    
+      <input
+        class="form-control"
+        type="password"
+        placeholder="Contraseña"
+        [(ngModel)]="registerData.contrasena"
+        name="Contraseña"
+      />
+      <!--fecha nacimiento  -->
+      <div class="divInput">
+        <label for="fechaInicio" class="lab">Fecha Nacimiento</label>
+        <input
+          class="form-label-control"
+          type="date"
+          name="begin"
+          value="registerData.fechaNacimiento"
+          name="fechaNacimiento"
+          [(ngModel)]="registerData.fechaNacimiento"
+        />
+      </div>
 
-            <button class="btn btn-primary btnC" (click)="registraUsuario()"role="button">Registrarse
-            </button>
-          
-        </form>
-    </div>
+      <!-- altura -->
+      <div class="divInput">
+        <label for="contenido" class="lab">Altura</label>
+        <input
+          class="form-label-control"
+          type="number"
+          name="meters"
+          step="0.01"
+          min="1"
+          [placeholder]="'e.g. 1.78'"
+          requiredplaceholder="Altura"
+          [(ngModel)]="registerData.altura"
+          name="Altura"
+        />
+      </div>
+
+      <!-- peso -->
+      <div class="divInput">
+        <label for="contenido" class="lab">Peso</label>
+        <input
+          class="form-label-control"
+          type="number"
+          placeholder="Peso"
+          [(ngModel)]="registerData.peso"
+          name="Peso"
+        />
+      </div>
+
+      <!-- enfermedades -->
+      <div class="divInput">
+        <label for="enfermedades" class="lab">¿Que enfermedades padeces?</label>
+
+        <input
+          type="radio"
+          #radioInput
+          [(ngModel)]="registerData.enfermedad1"
+          [value]="true"
+          name="something"
+        />
+        <input
+          type="radio"
+          [(ngModel)]="registerData.enfermedad2"
+          [value]="true"
+          name="something1"
+        />
+        <input
+          type="radio"
+          [(ngModel)]="registerData.enfermedad3"
+          [value]="true"
+          name="something2"
+        />
+      </div>
+
+      <button
+        class="btn btn-primary btnC"
+        (click)="registraUsuario()"
+        role="button"
+      >
+        Registrarse
+      </button>
+
+      <div>
+        <p>¿Ya tienes una cuenta? Inicia sesión aqui:</p>
+        <a class="nav-link" [routerLink]="['/login']">Inicia Sesión</a>
+      </div>
+    </form>
+  </div>
 </div>
