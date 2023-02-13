@@ -8,17 +8,55 @@ import { RegiterComponent } from './components/regiter/regiter.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { firebase } from '../environments/firebase';
+import { HomeComponent } from './components/home/home.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatSliderModule} from '@angular/material/slider'; 
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegiterComponent
+    RegiterComponent,
+    HomeComponent,
+    MainPageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    MatIconModule,
+    MatMenuModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatTabsModule,
+    MatDividerModule,
+    MatProgressBarModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatSidenavModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSliderModule,
     AngularFireMessagingModule,
     AngularFireModule.initializeApp(firebase)
   ],
