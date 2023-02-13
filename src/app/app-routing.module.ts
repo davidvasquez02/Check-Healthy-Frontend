@@ -6,6 +6,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { RegiterComponent } from './components/regiter/regiter.component';
 import { DashComponent } from './components/dash/dash.component';
 import { NavComponent } from './components/nav/nav.component';
+import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-examenes.component';
 import { EnfermedadComponent } from './components/enfermedad/enfermedad.component';
 
 const routes: Routes = [
@@ -58,5 +59,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  
 })
 export class AppRoutingModule {}
