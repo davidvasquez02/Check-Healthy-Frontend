@@ -29,6 +29,8 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider'; 
 
 
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import {MatSliderModule} from '@angular/material/slider';
     MatNativeDateModule,
     MatSliderModule,
     AngularFireMessagingModule,
-    AngularFireModule.initializeApp(firebase)
+    AngularFireModule.initializeApp(firebase),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
