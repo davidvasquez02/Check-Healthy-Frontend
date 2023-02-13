@@ -26,10 +26,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-import {MatSliderModule} from '@angular/material/slider'; 
-
-
-import { FormsModule } from '@angular/forms';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 @NgModule({

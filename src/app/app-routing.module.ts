@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
@@ -33,15 +32,6 @@ const routes: Routes = [
       },
       
     ]
-=======
-import { RegiterComponent } from './components/regiter/regiter.component';
-
-
-const routes: Routes = [
-  
-  {
-    path: '', component: RegiterComponent
->>>>>>> 64c65393f60745eb41371282321382f45c1e6e34
   }
 ]
 
