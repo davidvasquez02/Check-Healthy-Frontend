@@ -10,9 +10,7 @@ import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { firebase } from '../environments/firebase';
 import { HomeComponent } from './components/home/home.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
-
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +25,14 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
+import { NgChartsModule } from 'ng2-charts';
+import { DashComponent } from './components/dash/dash.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { NavComponent } from './components/nav/nav.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -36,7 +42,8 @@ import {MatSliderModule} from '@angular/material/slider';
     RegiterComponent,
     HomeComponent,
     MainPageComponent,
-    NavbarComponent
+    DashComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +65,14 @@ import {MatSliderModule} from '@angular/material/slider';
     MatSliderModule,
     AngularFireMessagingModule,
     AngularFireModule.initializeApp(firebase),
-    FormsModule
+    FormsModule,
+    NgChartsModule,
+    MatGridListModule,
+    MatButtonModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatListModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,3 +2,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container-index {
+    /* --bs-body-bg: red; */
+    background-image: url("./Fondo.png");
+    background-size:auto;
+    font-family: "Combo";
+  }
