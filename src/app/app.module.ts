@@ -33,6 +33,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NavComponent } from './components/nav/nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { GraficaMedicamentoComponent } from './components/grafica-medicamento/grafica-medicamento.component';
+import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-examenes.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { MatListModule } from '@angular/material/list';
     HomeComponent,
     MainPageComponent,
     DashComponent,
-    NavComponent
+    NavComponent,
+    GraficaMedicamentoComponent,
+    GraficaExamenesComponent
   ],
   imports: [
     BrowserModule,
