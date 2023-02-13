@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegiterComponent } from './components/regiter/regiter.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
+import { firebase } from '../environments/firebase';
+
 import { FormsModule } from '@angular/forms';
 
 
@@ -17,6 +21,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireMessagingModule,
+    AngularFireModule.initializeApp(firebase),
     FormsModule
   ],
   providers: [],
