@@ -1,0 +1,10 @@
+.container {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.boton {
+    background-color: antiquewhite;
+}
