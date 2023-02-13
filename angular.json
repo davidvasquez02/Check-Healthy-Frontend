@@ -101,6 +101,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Check-Healthy-Frontend:build:production",
+            "firebaseProject": "foodie-a132e",
+            "firebaseHostingSite": "foodie-a132e"
+          }
         }
       }
     }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "foodie-a132e": {
+      "hosting": {
+        "Check-Healthy-Frontend": [
+          "foodie-a132e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "foodie-a132e"
+  }
+}
