@@ -33,12 +33,9 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NavComponent } from './components/nav/nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
-<<<<<<< HEAD
 import { EnfermedadComponent } from './components/enfermedad/enfermedad.component';
-=======
 import { GraficaMedicamentoComponent } from './components/grafica-medicamento/grafica-medicamento.component';
 import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-examenes.component';
->>>>>>> de8524fe8e51b3a5fac1192cc22a6edaeef2255e
 
 
 @NgModule({
@@ -50,12 +47,9 @@ import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-
     MainPageComponent,
     DashComponent,
     NavComponent,
-<<<<<<< HEAD
-    EnfermedadComponent
-=======
+    EnfermedadComponent,
     GraficaMedicamentoComponent,
     GraficaExamenesComponent
->>>>>>> de8524fe8e51b3a5fac1192cc22a6edaeef2255e
   ],
   imports: [
     BrowserModule,
