@@ -9,6 +9,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-examenes.component';
 import { EnfermedadComponent } from './components/enfermedad/enfermedad.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { CreateExamComponent } from './components/create-exam/create-exam.component';
+import { CreateMedicineComponent } from './components/create-medicine/create-medicine.component';
 
 const routes: Routes = [
   {
@@ -50,12 +52,16 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'homec',
-    component: HomeComponent,
-  },
-  {
     path: 'control/:id',
     component: EnfermedadComponent,
+  },
+  {
+    path: 'control/:id/addMedicine',
+    component: CreateMedicineComponent,
+  },
+  {
+    path: 'control/:id/addExam',
+    component: CreateExamComponent,
   },
 ];
 

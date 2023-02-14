@@ -37,6 +37,8 @@ import { EnfermedadComponent } from './components/enfermedad/enfermedad.componen
 import { GraficaMedicamentoComponent } from './components/grafica-medicamento/grafica-medicamento.component';
 import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-examenes.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { CreateExamComponent } from './components/create-exam/create-exam.component';
+import { CreateMedicineComponent } from './components/create-medicine/create-medicine.component';
 
 
 @NgModule({
@@ -51,6 +53,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     EnfermedadComponent,
     GraficaMedicamentoComponent,
     GraficaExamenesComponent,
+    CreateExamComponent,
+    CreateMedicineComponent,
     PerfilComponent
   ],
   imports: [
