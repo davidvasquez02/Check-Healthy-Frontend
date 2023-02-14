@@ -1,10 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 .container-index {
-    /* --bs-body-bg: red; */
-    background-image: url("./Fondo.png");
-    background-size:auto;
-    font-family: "Combo";
-  }
+  /* --bs-body-bg: red; */
+  background-image: url("./Fondo.png");
+  background-size: auto;
+  font-family: "Combo";
+}
+
+.title {
+  color: rgb(16, 143, 247);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

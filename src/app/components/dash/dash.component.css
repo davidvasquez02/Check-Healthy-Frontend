@@ -11,9 +11,6 @@
   margin: 10%;
   margin-top: 3% !important;
 }
-.titulo {
-  color: black;
-}
 
 ::ng-deep .mat-mdc-card {
   color: black;
