@@ -53,12 +53,9 @@ import { CreateMedicineComponent } from './components/create-medicine/create-med
     EnfermedadComponent,
     GraficaMedicamentoComponent,
     GraficaExamenesComponent,
-<<<<<<< HEAD
     CreateExamComponent,
-    CreateMedicineComponent
-=======
+    CreateMedicineComponent,
     PerfilComponent
->>>>>>> f07b8de2713b1f38c0b1a821dc4707bdfa5b551d
   ],
   imports: [
     BrowserModule,
