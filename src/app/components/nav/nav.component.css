@@ -22,6 +22,17 @@
   color: black !important;
 }
 
+.img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgP {
+  border-radius: 50%;
+  max-width: 50%;
+}
+
 .btnC{
   border-color: transparent;
   background-color: transparent;

@@ -9,6 +9,13 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+      <div class="img">
+        <img
+          src="https://img.freepik.com/vector-gratis/ilustracion-concepto-diabetes_114360-3670.jpg?w=826&t=st=1676363178~exp=1676363778~hmac=aca1a5c4b0ddf0427701f78ccb48387476af450d2a2b742e8a575dd349bec9b3"
+          class="imgP"
+        />
+        <p class="title">Nombre Usuario</p>
+      </div>
       <a
         class="menu"
         *ngFor="let item of menu"
@@ -21,12 +28,8 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button
-      class="btnC"
-      type="button"
-      (click)="drawer.toggle()"
-    >
-    <mat-icon>menu</mat-icon>
+    <button class="btnC" type="button" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
     </button>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

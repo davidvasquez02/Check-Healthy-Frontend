@@ -1,49 +1,60 @@
-.container {
-    display: flex;
-    max-width: 60%;
-    border-radius: 15px;
-    background-color: whitesmoke;
-    padding: 1%;
-    margin-top: 8% !important;
-  }
-  .title {
-    color: red;
-    text-align: center;
-  }
-  .img {
-    max-width: 30%;
-    margin-top: 5%;
-  }
-  .imgP {
-    max-width: 90%;
-    border-radius: 70px;
-  }
-  .content {
-    min-width: 70%;
-  }
-  .btnC {
-    margin: 5px;
-    display: flex;
-  }
-  .but{
-      margin-top: 5%;
-  }
-  .field{
-    display: flex;
-  }
-  .cont{
-    font-weight: bold;
-  }
-  .previsualization {
-    max-height: 200px;
-    margin: 7%;
-  }
-  .pad{
-    padding: 3%;
-  }
-  form{
-    padding: 4%;
-  }
-  .mar{
-    max-width: 85% ;
-  }
+* {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile {
+  margin: 20px;
+  border-radius: 15px;
+}
+.profile-f {
+  border-radius: 15px;
+  background-color: whitesmoke;
+  padding: 8%;
+}
+.field {
+  padding-top: 5%;
+}
+.title {
+  color: rgb(16, 143, 247);
+  text-align: center;
+}
+.img {
+  max-width: 100%;
+}
+.imgP {
+  border-radius: 50%;
+  max-width: 50%;
+}
+
+.content {
+  min-width: 50%;
+}
+
+
+
+.btnC {
+  margin: 5px;
+}
+.but {
+  margin-top: 5%;
+  display:block ruby;
+}
+.cont {
+  font-weight: bold;
+  color: black;
+}
+p {
+  color: black;
+}
+.previsualization {
+  max-height: 200px;
+  margin: 7%;
+}
+form {
+  padding: 4%;
+}
+.mar {
+  max-width: 85%;
+}

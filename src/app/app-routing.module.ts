@@ -35,19 +35,21 @@ const routes: Routes = [
     component: NavComponent,
     children: [
       {
+        path: '',
+        component: HomeComponent,
+      },
+
+      {
+        path: 'perfil',
+        component: PerfilComponent,
+      },
+      {
         path: 'inicio',
         component: HomeComponent,
       },
       {
-        path: '',
-        redirectTo: '/inicio',
-        pathMatch: 'full',
-      },
-      { 
-        path: 'estadisticas', component: DashComponent 
-      },
-      { 
-        path: 'perfil', component: PerfilComponent
+        path: 'estadisticas',
+        component: DashComponent,
       },
     ],
   },
@@ -68,6 +70,5 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  
 })
 export class AppRoutingModule {}
