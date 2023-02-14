@@ -18,7 +18,7 @@ export class NavComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
-
+  
   public menu: Menu[] = [
     { icono: 'perm_identity', nombre: 'perfil' },
     { icono: 'home', nombre: 'inicio' },

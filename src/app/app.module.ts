@@ -36,6 +36,7 @@ import { MatListModule } from '@angular/material/list';
 import { EnfermedadComponent } from './components/enfermedad/enfermedad.component';
 import { GraficaMedicamentoComponent } from './components/grafica-medicamento/grafica-medicamento.component';
 import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-examenes.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 import { CreateExamComponent } from './components/create-exam/create-exam.component';
 import { CreateMedicineComponent } from './components/create-medicine/create-medicine.component';
 
@@ -52,8 +53,12 @@ import { CreateMedicineComponent } from './components/create-medicine/create-med
     EnfermedadComponent,
     GraficaMedicamentoComponent,
     GraficaExamenesComponent,
+<<<<<<< HEAD
     CreateExamComponent,
     CreateMedicineComponent
+=======
+    PerfilComponent
+>>>>>>> f07b8de2713b1f38c0b1a821dc4707bdfa5b551d
   ],
   imports: [
     BrowserModule,
