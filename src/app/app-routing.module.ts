@@ -8,6 +8,7 @@ import { DashComponent } from './components/dash/dash.component';
 import { NavComponent } from './components/nav/nav.component';
 import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-examenes.component';
 import { EnfermedadComponent } from './components/enfermedad/enfermedad.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 import { CreateExamComponent } from './components/create-exam/create-exam.component';
 import { CreateMedicineComponent } from './components/create-medicine/create-medicine.component';
 
@@ -26,10 +27,9 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/mainPage',
     pathMatch: 'full',
   },
-  
   {
     path: 'home',
     component: NavComponent,
@@ -45,6 +45,9 @@ const routes: Routes = [
       },
       { 
         path: 'estadisticas', component: DashComponent 
+      },
+      { 
+        path: 'perfil', component: PerfilComponent
       },
     ],
   },
