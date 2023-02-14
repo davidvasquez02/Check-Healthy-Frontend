@@ -19,6 +19,12 @@
 .divInput {
   width: 100%;
 }
+
+.divE {
+  width: 70% !important;
+  display:block ruby !important;
+}
+
 .form-control {
   margin: 3%;
   width: 70%;
@@ -36,6 +42,12 @@
   align-self: self-start;
   padding-left: 55px !important;
 }
+
+.labe {
+  display: block;
+  padding-left: 10px !important;
+}
+
 .btnC {
   margin: 4%;
 }

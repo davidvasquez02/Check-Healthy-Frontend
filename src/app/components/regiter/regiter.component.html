@@ -7,7 +7,6 @@
       <div>
         <h1 class="font-weight-bold text-center title">Check&Health</h1>
       </div>
-
       <div>
         <h2 class="font-weight-bold text-center title">Registrate</h2>
       </div>
@@ -80,28 +79,41 @@
       <div class="divInput">
         <label for="enfermedades" class="lab">¿Que enfermedades padeces?</label>
 
-        <input
-          type="radio"
-          #radioInput
-          [(ngModel)]="registerData.enfermedad1"
-          [value]="true"
-          name="something"
-        />
-        <input
-          type="radio"
-          [(ngModel)]="registerData.enfermedad2"
-          [value]="true"
-          name="something1"
-        />
-        <input
-          type="radio"
-          [(ngModel)]="registerData.enfermedad3"
-          [value]="true"
-          name="something2"
-        />
+        <div class="divE">
+          <input
+            type="checkbox"
+            [(ngModel)]="registerData.enfermedad1"
+            [value]="true"
+            name="something"
+          />
+          <label class="labe" for="vehicle1">Diabetes</label>
+        </div>
+
+        <div class="divE">
+          <input
+            type="checkbox"
+            [(ngModel)]="registerData.enfermedad2"
+            [value]="true"
+            name="something"
+          />
+          <label class="labe" for="vehicle1">Hipertension</label>
+        </div>
+
+        <div class="divE">
+          <input
+            type="checkbox"
+            [(ngModel)]="registerData.enfermedad3"
+            [value]="true"
+            name="something"
+          />
+          <label class="labe" for="vehicle1">Asma</label>
+        </div>
+
       </div>
 
       <button
+        type="submit"
+        value="Submit"
         class="btn btn-primary btnC"
         (click)="registraUsuario()"
         (click)="requestPermission()"
@@ -114,6 +126,7 @@
         <p>¿Ya tienes una cuenta? Inicia sesión aqui:</p>
         <a class="nav-link" [routerLink]="['/login']">Inicia Sesión</a>
       </div>
+
     </form>
   </div>
 </div>
