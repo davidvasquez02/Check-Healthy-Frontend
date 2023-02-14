@@ -36,6 +36,8 @@ import { MatListModule } from '@angular/material/list';
 import { EnfermedadComponent } from './components/enfermedad/enfermedad.component';
 import { GraficaMedicamentoComponent } from './components/grafica-medicamento/grafica-medicamento.component';
 import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-examenes.component';
+import { CreateExamComponent } from './components/create-exam/create-exam.component';
+import { CreateMedicineComponent } from './components/create-medicine/create-medicine.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-
     NavComponent,
     EnfermedadComponent,
     GraficaMedicamentoComponent,
-    GraficaExamenesComponent
+    GraficaExamenesComponent,
+    CreateExamComponent,
+    CreateMedicineComponent
   ],
   imports: [
     BrowserModule,

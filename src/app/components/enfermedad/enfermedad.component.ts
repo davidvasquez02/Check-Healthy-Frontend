@@ -8,14 +8,34 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EnfermedadComponent {
   tittle:String = ''; 
+  type:String = '';
 
   constructor(
     private activatedRoute: ActivatedRoute,
   ){}
+
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
-      this.tittle = params['id'];
+      this.type = params['id'];
     })
+
+    if(this.type=='db'){
+      this.tittle='Diabetes';
+      // llamar a servicio y cargar info
+      console.log('db')
+    }
+    
+    if(this.type=='ht'){
+      this.tittle='Hipertension';
+      // llamar a servicio y cargar info
+      console.log('db')
+    }
+    
+    if(this.type=='as'){
+      this.tittle='Asma';
+      // llamar a servicio y cargar info
+      console.log('db')
+    }
     
   }
 
