@@ -1,8 +1,16 @@
-.grid-container {
-  margin: 20px;
-  background-color: transparent;
+.dash-page {
+  height: 100%;
 }
-
+.dash {
+  border-radius: 15px;
+  background-color: whitesmoke;
+  padding: 4%;
+  align-items: self-start !important;
+  min-width: 30%;
+  height: 100%;
+  margin: 10%;
+  margin-top: 3% !important;
+}
 .titulo {
   color: black;
 }
@@ -11,6 +19,7 @@
   color: black;
   background-color: aliceblue !important;
   border-radius: 5px;
+  min-width: fit-content !important;
 }
 
 .dashboard-card {

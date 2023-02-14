@@ -1,19 +1,33 @@
-<p>Inicio</p>
-<div class="container">
-    <div class="boton">
-        <a [routerLink]="['../control/db']">
-            <h1>Diabetes</h1>
-        </a>
-    </div>
-    <div class="boton">
-        <a [routerLink]="['../control/ht']">
-            <h1>Hipertension</h1>
-        </a>
-    </div>
-    <div class="boton">
-        <a [routerLink]="['../control/as']">
-            <h1>Asma</h1>
-        </a>
+<div class="home-page">
+  <div class="home" appearance="fill" fxFlexFill>
+    <div>
+      <h1 class="font-weight-bold text-center title">Inicio</h1>
     </div>
 
+    <mat-divider></mat-divider>
+    <mat-divider inset></mat-divider>
+
+    <div class="items">
+      <div class="botn">
+        <a class="btn btn-outline-primary" [routerLink]="['../control/db']">
+          <mat-icon>favorite</mat-icon>
+          Diabetes
+        </a>
+      </div>
+
+      <div class="botn">
+        <a class="btn btn-outline-primary" [routerLink]="['../control/ht']">
+          <mat-icon>favorite</mat-icon>
+          Hipertension
+        </a>
+      </div>
+
+      <div class="botn">
+        <a class="btn btn-outline-primary" [routerLink]="['../control/as']">
+          <mat-icon>favorite</mat-icon>
+          Asma
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
