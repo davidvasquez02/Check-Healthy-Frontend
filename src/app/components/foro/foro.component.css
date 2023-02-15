@@ -1,71 +1,86 @@
-.container {
-    border-radius: 15px;
-    background-color: whitesmoke;
-    padding: 1%;
-    margin-top: 8% !important;
-    min-height: max-content;
-    max-width: 70%;
-    position: relative !important;
-    z-index: auto !important;
-  }
-  .header-image {
-    background-image: url("https://images.pexels.com/photos/35666/cooking-baby-only-kitchen.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-size: cover;
-  }
-  .btnC {
-    margin: 5px;
-    display: flex;
-  }
-  .btnS {
-    display: flex;
-  }
-  .marg{
-    margin: 5px;
-  }
-  .crear{
-    padding: 2%;
-  }
+.foro-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foro {
+  border-radius: 15px;
+  background-color: whitesmoke;
+  padding: 4%;
+  min-width: 30%;
+  height: 80%;
+  min-height: max-content;
+  max-width: 70%;
+}
+.header-image {
+  background-image: url("https://images.pexels.com/photos/35666/cooking-baby-only-kitchen.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+}
+.btnC {
+  margin: 5px;
+  display: flex;
+}
+.btnS {
+  display: flex;
+}
+.marg {
+  margin: 5px;
+}
+.crear {
+  padding: 2%;
+}
+
+::ng-deep
+  .mat-mdc-tab:not(.mat-mdc-tab-disabled)
+  .mdc-tab-indicator__content--underline,
+.mat-mdc-tab-link:not(.mat-mdc-tab-disabled)
+  .mdc-tab-indicator__content--underline {
+  border-color: rgb(16, 143, 247) !important;
+}
+
+::ng-deep
+  .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active
+  .mdc-tab__text-label,
+.mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active
+  .mdc-tab__text-label {
+  color: rgb(16, 143, 247) !important;
+}
+
+::ng-deep .mat-mdc-tab .mdc-tab__text-label,
+.mat-mdc-tab-link .mdc-tab__text-label {
+  color: rgb(166, 177, 177) !important;
+}
+
+::ng-deep .mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color: rgb(154, 170, 184) !important;
+  border-radius: 15px;
+}
   
-  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-    color: red !important;
-    background-color: rgba(211, 208, 20, 0.418);
-    border-radius: 5px;
-  }
-  
-  ::ng-deep .mat-tab-label-content {
-    color: red;
-  }
-  
-  ::ng-deep .mat-ink-bar {
+ /* ::ng-deep .mat-ink-bar {
     background-color: red !important;
   }
   
   ::ng-deep .ngx-pagination .current {
     background: red !important;
     border-radius: 15px;
-  }
-  
-  ::ng-deep .mat-divider.mat-divider-inset {
-    margin: 1% !important;
-  }
-  .cont{
-    width: 100%;
-  }
-  ::ng-deep .ngx-pagination .current {
-    background: red !important;
-    border-radius: 15px;
-  }
-  ::ng-deep .mat-divider.mat-divider-inset {
-    margin: 1% !important;
-  }
-  .container-entrega {
-    border-radius: 15px;
-    background-color: whitesmoke;
-    padding: 1%;
-    margin-top: 8% !important;
-    min-height: max-content;
-    max-width: 100%;
-    position: relative !important;
-    z-index: auto !important;
-  }
-  
+  } */
+
+.cont {
+  width: 100%;
+}
+::ng-deep .ngx-pagination .current {
+  background: red !important;
+  border-radius: 15px;
+}
+
+.container-entrega {
+  border-radius: 15px;
+  background-color: whitesmoke;
+  padding: 1%;
+  margin-top: 8% !important;
+  min-height: max-content;
+  max-width: 100%;
+  position: relative !important;
+  z-index: auto !important;
+}

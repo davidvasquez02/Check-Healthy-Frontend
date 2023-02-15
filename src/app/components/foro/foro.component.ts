@@ -26,8 +26,8 @@ export class ForoComponent {
   tableSize = 6;
   tableSizes = [3, 6, 9, 12];
   secciones: SeccionForo[] = [
-    { id: 1, nombre: 'seccion1', descripcion: 'holi' },
-    { id: 2, nombre: 'seccion2', descripcion: 'holi' },
+    { id: 1, nombre: 'Seccion1', descripcion: 'holi' },
+    { id: 2, nombre: 'Seccion2', descripcion: 'holi' },
   ];
 
   public comentarios: Comentario[] = [];
