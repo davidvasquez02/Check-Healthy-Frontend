@@ -27,7 +27,7 @@
   }
   
   ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-    color: red;
+    color: red !important;
     background-color: rgba(211, 208, 20, 0.418);
     border-radius: 5px;
   }
@@ -50,9 +50,6 @@
   }
   .cont{
     width: 100%;
-  }
-  .title {
-    color: red;
   }
   ::ng-deep .ngx-pagination .current {
     background: red !important;
