@@ -35,10 +35,9 @@ const routes: Routes = [
     component: NavComponent,
     children: [
       {
-        path: '',
+        path: 'inicio',
         component: HomeComponent,
       },
-
       {
         path: 'perfil',
         component: PerfilComponent,
