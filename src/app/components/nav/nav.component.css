@@ -3,14 +3,13 @@
   background-color: transparent;
 }
 
-.menu{
-  color: black !important;
+.menuIcon{
+  color:white !important;
 }
 
 .sidenav {
   width: 200px;
   background-color: whitesmoke;
-  color: black !important;
 }
 
 .mat-toolbar {
@@ -20,7 +19,11 @@
 }
 
 ::ng-deep .mdc-list-item__primary-text {
-  color: black !important;
+  color: rgb(154, 170, 184) !important;
+}
+
+::ng-deep .mat-icon {
+  color: rgb(16, 143, 247);
 }
 
 .img{
