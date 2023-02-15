@@ -56,6 +56,9 @@
   --mdc-linear-progress-active-indicator-color: rgb(154, 170, 184) !important;
   border-radius: 15px;
 }
+.icon{
+  color: white !important;
+}
   
  /* ::ng-deep .mat-ink-bar {
     background-color: red !important;
