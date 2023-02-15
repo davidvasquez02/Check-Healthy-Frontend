@@ -1,1 +1,33 @@
-<p>main-page works!</p>
+<div class="main-page">
+  <div class="main">
+    <div class="main-f" appearance="fill" fxFlexFill>
+      <div>
+        <img src="../../../favicon.ico" alt="Logo" class="img" />
+        <h1 class="text-center title">Check&Health</h1>
+      </div>
+
+      <div class="cont">
+        <div class="texto">
+          <h3 class="text-center">
+            ¡Bienvenido! <br />
+            Check&Health esta hecho para ayudarte a manejar de la mejor <br />
+            manera tus cuidados de salud, brindarte información y permitirte
+            <br />
+            entrar en una gran comunidad.<br />
+            ¿Que Esperas? ¡Únete!
+          </h3>
+        </div>
+        <div>
+          <p>¿Aún no tienes una cuenta? Registrate aqui:</p>
+          <button class="btn btn-primary" [routerLink]="['/register']">
+            Crea una cuenta
+          </button>
+          <p>¿Ya tienes una cuenta? Ingresa aqui:</p>
+          <button class="btn btn-primary" [routerLink]="['/login']">
+            Inicia Sesion
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
