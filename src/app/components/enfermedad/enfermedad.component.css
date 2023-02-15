@@ -1,0 +1,44 @@
+.ill-page {
+  min-height: 100%;
+}
+* {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ill {
+  border-radius: 15px;
+  min-height: 80%;
+  min-width: 60%;
+  background-color: whitesmoke;
+  padding: 6%;
+}
+
+.head {
+  min-width: 100%;
+  display: block !important;
+}
+.texto {
+  display: block !important;
+  font-weight: bold;
+}
+.default {
+  display: block ruby !important;
+  color: var(--text-color-main);
+  padding: 3%;
+  border-color:rgb(176, 178, 179) !important;
+  border-style: inset;
+  border-radius: 15px;
+  margin: 3%;
+}
+.mat-sort-header-container {
+  align-items: center;
+}
+
+::ng-deep .mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color: rgb(16, 143, 247) !important;
+}
+
+::ng-deep .mat-mdc-progress-bar .mdc-linear-progress__buffer-bar {
+  background-color: rgb(176, 178, 179) !important;
+}

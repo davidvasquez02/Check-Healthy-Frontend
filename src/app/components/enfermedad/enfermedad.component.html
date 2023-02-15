@@ -1,33 +1,49 @@
-<div>
-    <p>{{ tittle }}</p>
+<div class="ill-page">
+  <div class="ill">
     <div>
-        <p>Rutina del Dia</p>
-        <div>
-            aqui va el cuadrito
-        </div>
+      <h2 class="font-weight-bold text-center title">{{ tittle }}</h2>
     </div>
-    <div>
-        <p>Medicinas</p>
-        <div>
-            <table class="default">
-
-                <tr>
-                    <th>Nombre</th>
-                    <th>Tipo</th>
-                </tr>
-                <tr>
-                    <td>Loratadina</td>
-                    <td>oral</td>
-                </tr>
-            </table>
-        </div>
-        <button [routerLink]="['addMedicine']">Agregar</button>
+    <div class="head">
+      <p class="texto">Rutina del Dia</p>
+      <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+      <table class="default">
+        
+      <div>aqui va el cuadrito</div>
+      </table>
     </div>
-    <div>
-        <p>Examenes</p>
-        <div>
-            aqui va el cuadrito
-        </div>
-        <button [routerLink]="['addExam']">Agregar</button>
+    <div class="head">
+      <p class="texto">Medicinas</p>
+      <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+        <table class="default">
+          <tr>
+            <th mat-sort-header="name">Nombre</th>
+            <th mat-sort-header="type">Tipo</th>
+          </tr>
+          <tr>
+            <td>Loratadina</td>
+            <td>oral</td>
+          </tr>
+        </table>
+      <button class="btn btn-primary" [routerLink]="['addMedicine']">
+        Agregar
+      </button>
     </div>
+    <div class="head">
+      <p class="texto">Examenes</p>
+      <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+      <table class="default">
+        <tr>
+          <th mat-sort-header="name">Examen</th>
+          <th mat-sort-header="type">FechaHora</th>
+        </tr>
+        <tr>
+          <td>TalExamen</td>
+          <td>Hoy a las 5</td>
+        </tr>
+      </table>
+      <button class="btn btn-primary" [routerLink]="['addExam']">
+        Agregar
+      </button>
+    </div>
+  </div>
 </div>

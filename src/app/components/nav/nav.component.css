@@ -14,8 +14,9 @@
 }
 
 .mat-toolbar {
-  background-color: white;
-  color: black !important;
+  background-color: rgb(59, 192, 209);
+  color: white !important;
+  margin-bottom: 2%;
 }
 
 ::ng-deep .mdc-list-item__primary-text {
