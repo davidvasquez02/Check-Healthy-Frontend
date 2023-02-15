@@ -42,7 +42,7 @@
   height: 30%;
 }
 
-::ng-deep .mat-divider.mat-divider-inset {
-  margin: 1% !important;
-  color: red !important;
+::ng-deep .mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color: rgb(154, 170, 184) !important;
+  border-radius: 15px;
 }
