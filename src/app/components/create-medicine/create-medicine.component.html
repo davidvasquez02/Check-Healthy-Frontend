@@ -1,55 +1,99 @@
-<p>Agregar Medicina</p>
-<div class="register-page">
-    <div class="form">
-        <form class="login-form" appearance="fill" fxFlexFill>
-            <div>
-                <img src="../../../favicon.ico" alt="Logo" class="img" />
-            </div>
-
-            <!-- nombre -->
-            <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="createMedicine.nombre" name="Nombre" />
-
-            <!--fecha Inicio  -->
-            <div class="divInput">
-                <label for="fechaInicio" class="lab">Fecha Inicio</label>
-                <input class="form-label-control" type="date" name="begin" value="createMedicine.fechaInicio" name="fechaInicio" [(ngModel)]="createMedicine.fechaInicio" />
-            </div>
-
-            <!--fecha Fin  -->
-            <div class="divInput">
-                <label for="fechaInicio" class="lab">Fecha Inicio</label>
-                <input class="form-label-control" type="date" name="begin" value="createMedicine.fechaFin" name="fechaFin" [(ngModel)]="createMedicine.fechaFin" />
-            </div>
-
-            <!-- altura -->
-            <div class="divInput">
-                <label for="contenido" class="lab">Dosis</label>
-                <input class="form-label-control" type="text" name="meters" step="0.01" min="1" [placeholder]="'e.g. 1.78'" requiredplaceholder="dosis" [(ngModel)]="createMedicine.dosis" name="Altura" />
-            </div>
-
-            <!-- peso -->
-            <div class="divInput">
-                <label for="contenido" class="lab">periodicidad</label>
-                <input class="form-label-control" type="number" placeholder="Peso" [(ngModel)]="createMedicine.periodicidad" name="periodicidad" />
-            </div>
-
-
-            <!-- hora -->
-            <div class="divInput">
-                <label for="contenido" class="lab">Hora</label>
-                <input class="form-label-control" type="number" placeholder="Hora" [(ngModel)]="createMedicine.hora" name="hora" />
-            </div>
-
-
-            <button type="submit" value="Submit" class="btn btn-primary btnC" role="button">
-          Registrarse
-        </button>
-
-            <div>
-                <p>¿Ya tienes una cuenta? Inicia sesión aqui:</p>
-                <a class="nav-link" [routerLink]="['/login']">Inicia Sesión</a>
-            </div> -->
-
-        </form>
+<div class="addMed-page">
+  <div class="addMed">
+    <div>
+      <h2 class="font-weight-bold text-center title">Agregar Medicina</h2>
     </div>
+    <mat-progress-bar
+      class="divider"
+      mode="determinate"
+      value="100"
+    ></mat-progress-bar>
+
+    <form class="add-form" appearance="fill" fxFlexFill>
+      <!-- nombre -->
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Nombre"
+        [(ngModel)]="createMedicine.nombre"
+        name="Nombre"
+      />
+
+      <!--fecha Inicio  -->
+      <div class="divInput">
+        <label for="fechaInicio" class="texto">Fecha Hora Inicio</label>
+        <input
+          class="form-label-control"
+          type="date"
+          name="begin"
+          value="createMedicine.fechaInicio"
+          name="fechaInicio"
+          [(ngModel)]="createMedicine.fechaInicio"
+        />
+      </div>
+
+      <!--fecha Fin  -->
+      <div class="divInput">
+        <label for="fechaInicio" class="texto">Fecha Hora Final</label>
+        <input
+          class="form-label-control"
+          type="date"
+          name="begin"
+          value="createMedicine.fechaFin"
+          name="fechaFin"
+          [(ngModel)]="createMedicine.fechaFin"
+        />
+      </div>
+
+      <!-- altura -->
+      <div class="divInput">
+        <label for="contenido" class="texto">Dosis</label>
+        <input
+          class="form-label-control"
+          type="text"
+          name="meters"
+          step="0.01"
+          min="1"
+          [placeholder]="'e.g. 1.78'"
+          requiredplaceholder="dosis"
+          [(ngModel)]="createMedicine.dosis"
+          name="Altura"
+        />
+      </div>
+
+      <!-- peso -->
+      <div class="divInput">
+        <label for="contenido" class="texto">Frecuencia</label>
+        <input
+          class="form-label-control"
+          type="number"
+          placeholder="Peso"
+          [(ngModel)]="createMedicine.periodicidad"
+          name="periodicidad"
+        />
+      </div>
+
+      <!-- hora -->
+      <div class="divInput">
+        <label for="contenido" class="texto">Tipo de Frecuencia</label>
+        <input
+          class="form-label-control"
+          type="number"
+          placeholder="Hora"
+          [(ngModel)]="createMedicine.hora"
+          name="hora"
+        />
+      </div>
+
+      <button
+        type="submit"
+        value="Submit"
+        class="btn btn-primary btnC"
+        role="button"
+      >
+        Agregar
+      </button>
+
+    </form>
+  </div>
 </div>

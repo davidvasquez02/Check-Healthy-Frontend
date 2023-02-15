@@ -1,1 +1,100 @@
-<p>create-exam works!</p>
+<div class="addMed-page">
+    <div class="addMed">
+      <div>
+        <h2 class="font-weight-bold text-center title">Agregar Examen</h2>
+      </div>
+      <mat-progress-bar
+        class="divider"
+        mode="determinate"
+        value="100"
+      ></mat-progress-bar>
+  
+      <form class="add-form" appearance="fill" fxFlexFill>
+        <!-- nombre -->
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Nombre"
+          [(ngModel)]="createExam.nombre"
+          name="Nombre"
+        />
+  
+        <!--fecha Inicio  -->
+        <div class="divInput">
+          <label for="fechaInicio" class="texto">Fecha Hora Inicio</label>
+          <input
+            class="form-label-control"
+            type="date"
+            name="begin"
+            value="createMedicine.fechaInicio"
+            name="fechaInicio"
+            [(ngModel)]="createExam.fechaInicio"
+          />
+        </div>
+  
+        <!--fecha Fin  -->
+        <div class="divInput">
+          <label for="fechaInicio" class="texto">Fecha Hora Final</label>
+          <input
+            class="form-label-control"
+            type="date"
+            name="begin"
+            value="createMedicine.fechaFin"
+            name="fechaFin"
+            [(ngModel)]="createExam.fechaFin"
+          />
+        </div>
+  
+        <!-- altura -->
+        <div class="divInput">
+          <label for="contenido" class="texto">Dosis</label>
+          <input
+            class="form-label-control"
+            type="text"
+            name="meters"
+            step="0.01"
+            min="1"
+            [placeholder]="'e.g. 1.78'"
+            requiredplaceholder="dosis"
+            [(ngModel)]="createExam.dosis"
+            name="Altura"
+          />
+        </div>
+  
+        <!-- peso -->
+        <div class="divInput">
+          <label for="contenido" class="texto">Frecuencia</label>
+          <input
+            class="form-label-control"
+            type="number"
+            placeholder="Peso"
+            [(ngModel)]="createExam.periodicidad"
+            name="periodicidad"
+          />
+        </div>
+  
+        <!-- hora -->
+        <div class="divInput">
+          <label for="contenido" class="texto">Tipo de Frecuencia</label>
+          <input
+            class="form-label-control"
+            type="number"
+            placeholder="Hora"
+            [(ngModel)]="createExam.hora"
+            name="hora"
+          />
+        </div>
+  
+        <button
+          type="submit"
+          value="Submit"
+          class="btn btn-primary btnC"
+          role="button"
+        >
+          Agregar
+        </button>
+  
+      </form>
+    </div>
+  </div>
+  
