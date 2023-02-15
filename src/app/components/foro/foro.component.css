@@ -1,0 +1,74 @@
+.container {
+    border-radius: 15px;
+    background-color: whitesmoke;
+    padding: 1%;
+    margin-top: 8% !important;
+    min-height: max-content;
+    max-width: 70%;
+    position: relative !important;
+    z-index: auto !important;
+  }
+  .header-image {
+    background-image: url("https://images.pexels.com/photos/35666/cooking-baby-only-kitchen.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+  }
+  .btnC {
+    margin: 5px;
+    display: flex;
+  }
+  .btnS {
+    display: flex;
+  }
+  .marg{
+    margin: 5px;
+  }
+  .crear{
+    padding: 2%;
+  }
+  
+  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color: red;
+    background-color: rgba(211, 208, 20, 0.418);
+    border-radius: 5px;
+  }
+  
+  ::ng-deep .mat-tab-label-content {
+    color: red;
+  }
+  
+  ::ng-deep .mat-ink-bar {
+    background-color: red !important;
+  }
+  
+  ::ng-deep .ngx-pagination .current {
+    background: red !important;
+    border-radius: 15px;
+  }
+  
+  ::ng-deep .mat-divider.mat-divider-inset {
+    margin: 1% !important;
+  }
+  .cont{
+    width: 100%;
+  }
+  .title {
+    color: red;
+  }
+  ::ng-deep .ngx-pagination .current {
+    background: red !important;
+    border-radius: 15px;
+  }
+  ::ng-deep .mat-divider.mat-divider-inset {
+    margin: 1% !important;
+  }
+  .container-entrega {
+    border-radius: 15px;
+    background-color: whitesmoke;
+    padding: 1%;
+    margin-top: 8% !important;
+    min-height: max-content;
+    max-width: 100%;
+    position: relative !important;
+    z-index: auto !important;
+  }
+  

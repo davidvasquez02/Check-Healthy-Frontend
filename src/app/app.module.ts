@@ -21,10 +21,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatSliderModule} from '@angular/material/slider';
+import { MatNativeDateModule} from '@angular/material/core';
+import { MatSliderModule} from '@angular/material/slider';
 import { NgChartsModule } from 'ng2-charts'; 
 import { DashComponent } from './components/dash/dash.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -39,6 +39,7 @@ import { GraficaExamenesComponent } from './components/grafica-examenes/grafica-
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CreateExamComponent } from './components/create-exam/create-exam.component';
 import { CreateMedicineComponent } from './components/create-medicine/create-medicine.component';
+import { ForoComponent } from './components/foro/foro.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { CreateMedicineComponent } from './components/create-medicine/create-med
     GraficaExamenesComponent,
     CreateExamComponent,
     CreateMedicineComponent,
-    PerfilComponent
+    PerfilComponent,
+    ForoComponent
   ],
   imports: [
     BrowserModule,

@@ -22,6 +22,7 @@ export class NavComponent {
   public menu: Menu[] = [
     { icono: 'perm_identity', nombre: 'perfil' },
     { icono: 'home', nombre: 'inicio' },
+    { icono: 'home', nombre: 'foro' },
     { icono: 'poll', nombre: 'estadisticas' },
     { icono: 'settings', nombre: 'configuracion' },
   ];

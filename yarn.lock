@@ -5262,6 +5262,11 @@
 "supports-preserve-symlinks-flag@^1.0.0":
   "version" "1.0.0"
 
+"sweetalert2@^11.7.1":
+  "integrity" "sha512-+1bnkbqBl64FnZmi3g4SzAi4F3pL3S2jF1YQvrysv4GbgizfeFqGkJopxR3FnV/eJm6w2SQ2oAmCxSIBjgP/ag=="
+  "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.7.1.tgz"
+  "version" "11.7.1"
+
 "symbol-observable@4.0.0":
   "version" "4.0.0"
 
