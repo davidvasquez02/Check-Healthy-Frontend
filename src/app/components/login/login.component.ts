@@ -21,6 +21,7 @@ export class LoginComponent {
   constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit(): void {
+    sessionStorage.clear();
     if (sessionStorage.getItem('correo')) {
       this.router.navigate(['home/inicio']);
     }
