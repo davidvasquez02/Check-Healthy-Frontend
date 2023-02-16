@@ -1,132 +1,69 @@
 <div class="register-page">
-  <div class="form">
-    <form class="register-form" appearance="fill" fxFlexFill>
-      <div>
-        <img src="../../../favicon.ico" alt="Logo" class="img" />
-      </div>
-      <div>
-        <h1 class="font-weight-bold text-center title">Check&Health</h1>
-      </div>
-      <div>
-        <h2 class="font-weight-bold text-center title">Registrate</h2>
-      </div>
-      <!-- nombre -->
-      <input
-        class="form-control"
-        type="text"
-        placeholder="Nombre"
-        [(ngModel)]="registerData.nombre"
-        name="Nombre"
-      />
-      <!--  -->
-      <input
-        class="form-control"
-        type="email"
-        placeholder="Email"
-        [(ngModel)]="registerData.correo"
-        name="Email"
-      />
+    <div class="form">
+        <form class="register-form" appearance="fill" fxFlexFill>
+            <div>
+                <img src="../../../favicon.ico" alt="Logo" class="img" />
+            </div>
+            <div>
+                <h1 class="font-weight-bold text-center title">Check&Health</h1>
+            </div>
+            <div>
+                <h2 class="font-weight-bold text-center title">Registrate</h2>
+            </div>
+            <!-- nombre -->
+            <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="registerData.nombre" name="Nombre" />
+            <!--  -->
+            <input class="form-control" type="email" placeholder="Email" [(ngModel)]="registerData.correo" name="Email" />
 
-      <input
-        class="form-control"
-        type="password"
-        placeholder="Contraseña"
-        [(ngModel)]="registerData.contrasena"
-        name="Contraseña"
-      />
-      <!--fecha nacimiento  -->
-      <div class="divInput">
-        <label for="fechaInicio" class="lab">Fecha Nacimiento</label>
-        <input
-          class="form-label-control"
-          type="date"
-          name="begin"
-          value="registerData.fechaNacimiento"
-          name="fechaNacimiento"
-          [(ngModel)]="registerData.fechaNacimiento"
-        />
-      </div>
+            <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="registerData.contrasena" name="Contraseña" />
+            <!--fecha nacimiento  -->
+            <div class="divInput">
+                <label for="fechaInicio" class="lab">Fecha Nacimiento</label>
+                <input class="form-label-control" type="date" name="begin" value="registerData.fechaNacimiento" name="fechaNacimiento" [(ngModel)]="registerData.fechaNacimiento" />
+            </div>
 
-      <!-- altura -->
-      <div class="divInput">
-        <label for="contenido" class="lab">Altura Mts</label>
-        <input
-          class="form-label-control"
-          type="number"
-          name="meters"
-          step="0.01"
-          min="1"
-          [placeholder]="'e.g. 1.78'"
-          requiredplaceholder="Altura"
-          [(ngModel)]="registerData.altura"
-          name="Altura"
-        />
-      </div>
+            <!-- altura -->
+            <div class="divInput">
+                <label for="contenido" class="lab">Altura Mts</label>
+                <input class="form-label-control" type="number" name="meters" step="0.01" min="1" [placeholder]="'e.g. 1.78'" requiredplaceholder="Altura" [(ngModel)]="registerData.alturaMt" name="Altura" />
+            </div>
 
-      <!-- peso -->
-      <div class="divInput">
-        <label for="contenido" class="lab">Peso Kg</label>
-        <input
-          class="form-label-control"
-          type="number"
-          placeholder="Peso"
-          [(ngModel)]="registerData.peso"
-          name="Peso"
-        />
-      </div>
+            <!-- peso -->
+            <div class="divInput">
+                <label for="contenido" class="lab">Peso Kg</label>
+                <input class="form-label-control" type="number" placeholder="Peso" [(ngModel)]="registerData.pesoKg" name="Peso" />
+            </div>
 
-      <!-- enfermedades -->
-      <div class="divInput">
-        <label for="enfermedades" class="lab">¿Que enfermedades padeces?</label>
+            <!-- enfermedades -->
+            <div class="divInput">
+                <label for="enfermedades" class="lab">¿Que enfermedades padeces?</label>
 
-        <div class="divE">
-          <input
-            type="checkbox"
-            [(ngModel)]="registerData.enfermedad1"
-            [value]="true"
-            name="something"
-          />
-          <label class="labe" for="vehicle1">Diabetes</label>
-        </div>
+                <div class="divE">
+                    <input type="checkbox" [(ngModel)]="registerData.diabetes" [value]="true" name="something" />
+                    <label class="labe" for="vehicle1">Diabetes</label>
+                </div>
 
-        <div class="divE">
-          <input
-            type="checkbox"
-            [(ngModel)]="registerData.enfermedad2"
-            [value]="true"
-            name="something"
-          />
-          <label class="labe" for="vehicle1">Hipertension</label>
-        </div>
+                <div class="divE">
+                    <input type="checkbox" [(ngModel)]="registerData.hipertension" [value]="true" name="something" />
+                    <label class="labe" for="vehicle1">Hipertension</label>
+                </div>
 
-        <div class="divE">
-          <input
-            type="checkbox"
-            [(ngModel)]="registerData.enfermedad3"
-            [value]="true"
-            name="something"
-          />
-          <label class="labe" for="vehicle1">Asma</label>
-        </div>
+                <div class="divE">
+                    <input type="checkbox" [(ngModel)]="registerData.asma" [value]="true" name="something" />
+                    <label class="labe" for="vehicle1">Asma</label>
+                </div>
 
-      </div>
+            </div>
 
-      <button
-        type="submit"
-        value="Submit"
-        class="btn btn-primary btnC"
-        (click)="registraUsuario()"
-        (click)="requestPermission()"
-        role="button"
-      >
+            <button type="submit" value="Submit" class="btn btn-primary btnC" (click)="registraUsuario()" (click)="requestPermission()" role="button">
         Registrarse
       </button>
 
-      <div>
-        <p>¿Ya tienes una cuenta? Inicia sesión aqui:</p>
-        <a class="nav-link" [routerLink]="['/login']">Inicia Sesión</a>
-      </div>
+            <div>
+                <p>¿Ya tienes una cuenta? Inicia sesión aqui:</p>
+                <a class="nav-link" [routerLink]="['/login']">Inicia Sesión</a>
+            </div>
 
-    </form>
-  </div>
+        </form>
+    </div>
 </div>
