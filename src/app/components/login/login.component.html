@@ -1,6 +1,6 @@
 <div class="login-page">
   <div class="form">
-    <form class="login-form" appearance="fill" fxFlexFill>
+    <form class="login-form" (submit)="login()" appearance="fill" fxFlexFill>
       <div>
         <img src="../../../favicon.ico" alt="Logo" class="img" />
       </div>
@@ -15,7 +15,7 @@
         class="form-control"
         type="text"
         placeholder="Email"
-        [(ngModel)]="credentials.correo"
+        [(ngModel)]="actualCredentials.correo"
         name="email"
       />
 
@@ -23,7 +23,7 @@
         class="form-control"
         type="password"
         placeholder="Contraseña"
-        [(ngModel)]="credentials.contrasena"
+        [(ngModel)]="actualCredentials.contrasena"
         name="password"
       />
 
