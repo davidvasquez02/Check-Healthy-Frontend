@@ -77,6 +77,11 @@
   border-radius: 15px;
 }
 
+::ng-deep .mat-mdc-card {
+  --mdc-elevated-card-container-color: rgb(185, 220, 248) !important;
+  margin: 2%;
+}
+
 .container-entrega {
   border-radius: 15px;
   background-color: whitesmoke;
