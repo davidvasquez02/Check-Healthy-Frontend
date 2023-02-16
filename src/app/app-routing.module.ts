@@ -54,19 +54,19 @@ const routes: Routes = [
         path: 'foro',
         component: ForoComponent,
       },
+      {
+        path: 'control/:id',
+        component: EnfermedadComponent,
+      },
+      {
+        path: 'control/:id/addMedicine',
+        component: CreateMedicineComponent,
+      },
+      {
+        path: 'control/:id/addExam',
+        component: CreateExamComponent,
+      },
     ],
-  },
-  {
-    path: 'control/:id',
-    component: EnfermedadComponent,
-  },
-  {
-    path: 'control/:id/addMedicine',
-    component: CreateMedicineComponent,
-  },
-  {
-    path: 'control/:id/addExam',
-    component: CreateExamComponent,
   },
 ];
 

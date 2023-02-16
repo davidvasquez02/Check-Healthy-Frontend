@@ -1,6 +1,6 @@
 <div class="login-page">
     <div class="form">
-        <form class="login-form" appearance="fill" fxFlexFill>
+        <form class="login-form" (submit)="login()" appearance="fill" fxFlexFill>
             <div>
                 <img src="../../../favicon.ico" alt="Logo" class="img" />
             </div>
@@ -10,10 +10,6 @@
             <div>
                 <h2 class="font-weight-bold text-center title">Inicia Sesion</h2>
             </div>
-
-            <input class="form-control" type="text" placeholder="Email" [(ngModel)]="credentials.correo" name="email" />
-
-            <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="credentials.contrasena" name="password" />
 
             <button class="btn btn-primary" (click)="iniciaSesion()" type="submit" role="button">Login</button>
 

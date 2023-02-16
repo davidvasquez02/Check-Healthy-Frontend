@@ -1,23 +1,67 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserCredentials } from 'src/app/models/user-credentials';
-import { UsuarioService } from 'src/app/services/usuario.service';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  //credentials:UserCredentials = new UserCredentials("", "")
 
-  credentials:UserCredentials = new UserCredentials("", "")
+  isLogin: Boolean = false;
 
-  constructor(private router: Router, private userService: UsuarioService){}
+  actualCredentials: User = new User();
 
-  iniciaSesion(){
-    this.userService.inicioSesion(this.credentials.correo,this.credentials.contrasena).subscribe(response=>{
-      console.log(response);
-    })
+  private user: User = new User();
+
+  constructor(private router: Router, private userService: UserService) {}
+
+  ngOnInit(): void {
+    if (sessionStorage.getItem('correo')) {
+      this.router.navigate(['home/inicio']);
+    }
   }
 
+  public login(): void {
+    this.userService
+      .validateUser(
+        this.actualCredentials.correo,
+        this.actualCredentials.contrasena
+      )
+      .subscribe((response) => {
+        this.user = response;
+        if (this.validate(this.user)) {
+          Swal.fire('Bienvenido', '', 'success');
+          setTimeout(() => {
+            this.router.navigate(['home/inicio']);
+          }, 1000);
+        } else {
+          Swal.fire('Credenciales invalidas', '', 'error');
+        }
+      });
+  }
+
+  private validate(userInfo: User): Boolean {
+    console.log(this.actualCredentials.correo);
+    console.log(userInfo);
+    console.log(this.actualCredentials);
+
+
+    if (userInfo === null) {
+      return false;
+    } else if (
+      this.actualCredentials.correo === userInfo.correo &&
+      this.actualCredentials.contrasena === userInfo.contrasena
+    ) {
+      sessionStorage.setItem('correo', this.actualCredentials.correo);
+      sessionStorage.setItem('idUsuario', userInfo.id + '');
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

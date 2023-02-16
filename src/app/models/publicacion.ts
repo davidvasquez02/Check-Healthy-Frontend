@@ -4,7 +4,6 @@ export class Publicacion {
     public idSeccionForo!: number;
     public contenido!: String;
     public fecha!: String;
-    public adjunto!: String;
     public nombreUsuario!: string;
 
     constructor(){

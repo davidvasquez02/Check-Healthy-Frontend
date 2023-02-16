@@ -27,7 +27,9 @@
   border-radius: 50%;
   max-width: 50%;
 }
-
+.icon{
+  color: white !important;
+}
 .content {
   min-width: 50%;
 }

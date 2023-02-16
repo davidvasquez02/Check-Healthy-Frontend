@@ -26,7 +26,7 @@ export class EnfermedadComponent {
     }
     
     if(this.type=='ht'){
-      this.tittle='Hipertension';
+      this.tittle='Hipertensión';
       // llamar a servicio y cargar info
       console.log('db')
     }
