@@ -40,6 +40,7 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { CreateExamComponent } from './components/create-exam/create-exam.component';
 import { CreateMedicineComponent } from './components/create-medicine/create-medicine.component';
 import { ForoComponent } from './components/foro/foro.component';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 
 
@@ -88,6 +89,7 @@ import { ForoComponent } from './components/foro/foro.component';
     MatToolbarModule,
     MatListModule,
     MatSidenavModule,
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]
