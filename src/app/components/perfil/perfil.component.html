@@ -43,19 +43,15 @@
           class="form-control"
           type="text"
           placeholder="Nombre"
+          [(ngModel)]="user.nombre"
           name="Nombre"
         />
         <input
           class="form-control"
           type="password"
           placeholder="Contraseña"
+          [(ngModel)]="user.contrasena"
           name="Contraseña"
-        />
-        <input
-          class="form-control"
-          type="email"
-          placeholder="Email"
-          name="Email"
         />
         <div class="but">
           <button class="btn btn-primary btnC" (click)="editUser()">
