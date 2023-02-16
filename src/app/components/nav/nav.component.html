@@ -25,6 +25,11 @@
         <mat-icon> {{ item.icono }} </mat-icon>
         {{ item.nombre | titlecase }}
       </a>
+
+      <a class="menu" mat-list-item (click)="signOut()">
+        <mat-icon>keyboard_tab</mat-icon>
+        Cerrar Sesion
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

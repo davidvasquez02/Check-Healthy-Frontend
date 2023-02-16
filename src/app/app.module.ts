@@ -41,6 +41,7 @@ import { CreateExamComponent } from './components/create-exam/create-exam.compon
 import { CreateMedicineComponent } from './components/create-medicine/create-medicine.component';
 import { ForoComponent } from './components/foro/foro.component';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { NotificacionesComponent } from './components/notificaciones/notificaciones.component';
 
 
 
@@ -59,7 +60,8 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     CreateExamComponent,
     CreateMedicineComponent,
     PerfilComponent,
-    ForoComponent
+    ForoComponent,
+    NotificacionesComponent
   ],
   imports: [
     BrowserModule,

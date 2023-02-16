@@ -11,6 +11,7 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { CreateExamComponent } from './components/create-exam/create-exam.component';
 import { CreateMedicineComponent } from './components/create-medicine/create-medicine.component';
 import { ForoComponent} from './components/foro/foro.component';
+import { NotificacionesComponent } from './components/notificaciones/notificaciones.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,10 @@ const routes: Routes = [
       {
         path: 'foro',
         component: ForoComponent,
+      },
+      {
+        path: 'notificaciones',
+        component: NotificacionesComponent,
       },
       {
         path: 'control/:id/:eu',
