@@ -7,25 +7,27 @@
     <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
 
     <div class="items">
-      <div class="botn">
-        <a class="btn btn-outline-primary" [routerLink]="['../control/db']">
+      <div class="botn" *ngFor="let e of enfermedades">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          *ngIf="e.padece"
+          [routerLink]="[e.route]"
+        >
           <mat-icon>favorite</mat-icon>
-          Diabetes
-        </a>
-      </div>
+          {{ e.nombreEnfermedad }}
+        </button>
 
-      <div class="botn">
-        <a class="btn btn-outline-primary" [routerLink]="['../control/ht']">
-          <mat-icon>favorite</mat-icon>
-          Hipertension
-        </a>
-      </div>
-
-      <div class="botn">
-        <a class="btn btn-outline-primary" [routerLink]="['../control/as']">
-          <mat-icon>favorite</mat-icon>
-          Asma
-        </a>
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          disabled
+          *ngIf="!e.padece"
+          [routerLink]="[e.route]"
+        >
+          <mat-icon class="disIcon">favorite</mat-icon>
+          {{ e.nombreEnfermedad }} 
+        </button>
       </div>
     </div>
   </div>
