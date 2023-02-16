@@ -12,8 +12,10 @@ import { MedicamentoUserService } from 'src/app/services/medicamentoUser.service
 })
 export class CreateMedicineComponent {
   createMedicine: addMedicine = new addMedicine(0,'', 0, 0, '', 0, '','');
+  newMedicine: addMedicine= new addMedicine(0,'', 0, 0, '', 0, '','');
   type:String = '';
   idEUser:number = 0 ;
+  hora:String='';
 
   tipoFrecuencias: TipoFrecuencia[] = [
     { id: 1, nombre: 'Horas', multiplicador: 1 },
@@ -43,11 +45,16 @@ export class CreateMedicineComponent {
   }
 
   agregarMedicamento(): void {
+    this.createMedicine.fechaInicio=this.createMedicine.fechaInicio.substring(8,10)+'-' +this.createMedicine.fechaInicio.substring(5,7) + '-'+this.createMedicine.fechaInicio.substring(0,4)
+    this.createMedicine.fechaInicio=this.createMedicine.fechaInicio+' '+ this.hora+':00'
+    this.createMedicine.fechaFin=this.createMedicine.fechaInicio+'00:00:00'
+
+    this.newMedicine = this.createMedicine;
     this.medicamentoService
-      .create(this.createMedicine)
+      .create(this.newMedicine)
       .subscribe((response) => {
         console.log(response);
-        if (this.createMedicine.idEnfermedadUsuario === response.idEnfermedadUsuario) {
+        if (this.createMedicine.nombre === response.nombre) {
           window.location.reload();
         }
       });

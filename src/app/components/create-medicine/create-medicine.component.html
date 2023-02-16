@@ -1,107 +1,64 @@
 <div class="addMed-page">
-  <div class="addMed">
-    <div>
-      <h2 class="font-weight-bold text-center title">Agregar Medicina</h2>
-    </div>
-    <mat-progress-bar
-      class="divider"
-      mode="determinate"
-      value="100"
-    ></mat-progress-bar>
+    <div class="addMed">
+        <div>
+            <h2 class="font-weight-bold text-center title">Agregar Medicina</h2>
+        </div>
+        <mat-progress-bar class="divider" mode="determinate" value="100"></mat-progress-bar>
 
-    <form class="add-form" (submit)="agregarMedicamento()" appearance="fill" fxFlexFill>
-      <!-- nombre -->
-      <input
-        class="form-control"
-        type="text"
-        placeholder="Nombre"
-        [(ngModel)]="createMedicine.nombre"
-        name="Nombre"
-      />
+        <form class="add-form" (submit)="agregarMedicamento()" appearance="fill" fxFlexFill>
+            <!-- nombre -->
+            <input class="form-control" type="text" placeholder="Nombre" [(ngModel)]="createMedicine.nombre" name="Nombre" />
 
-      <!--fecha Inicio  -->
-      <div class="divInput">
-        <label for="fechaInicio" class="texto">Fecha Hora Inicio</label>
-        <input
-          class="form-label-control"
-          type="date"
-          name="begin"
-          value="createMedicine.fechaInicio"
-          name="fechaInicio"
-          [(ngModel)]="createMedicine.fechaInicio"
-        />
-      </div>
+            <!--fecha Inicio  -->
+            <div class="divInput">
+                <label for="fechaInicio" class="texto">Fecha Hora Inicio</label>
+                <input class="form-label-control" type="date" name="begin" value="createMedicine.fechaInicio" name="fechaInicio" [(ngModel)]="createMedicine.fechaInicio" />
+            </div>
 
-      <!--fecha Fin  -->
-      <div class="divInput">
-        <label for="fechaFinal" class="lab texto">Fecha Hora Final</label>
-        <input
-          class="form-label-control"
-          type="date"
-          name="begin"
-          value="createMedicine.fechaFin"
-          name="fechaFin"
-          [(ngModel)]="createMedicine.fechaFin"
-        />
-      </div>
+            <input [(ngModel)]="hora" id="appt-time" type="time" name="appt-time" value="12:00">
 
-      <!-- Dosis -->
-      <div class="divInput">
-        <label for="contenido" class="texto">Dosis</label>
-        <input
-          class="form-label-control"
-          type="text"
-          name="meters"
-          step="0.01"
-          min="1"
-          [placeholder]="'e.g. 1.78'"
-          requiredplaceholder="dosis"
-          [(ngModel)]="createMedicine.dosis"
-          name="dosis"
-        />
-      </div>
+            <!--fecha Fin  -->
+            <div class="divInput">
+                <label for="fechaFinal" class="lab texto">Fecha Hora Final</label>
+                <input class="form-label-control" type="date" name="begin" value="createMedicine.fechaFin" name="fechaFin" [(ngModel)]="createMedicine.fechaFin" />
+            </div>
 
-      <!-- Tipo de Dosis -->
-      <div class="divInput">
-        <label for="contenido" class="texto">Tipo de Dosis</label>
-        <select name="frecuencia" [(ngModel)]="createMedicine.idTipoDosis" id="">
+            <!-- Dosis -->
+            <div class="divInput">
+                <label for="contenido" class="texto">Dosis</label>
+                <input class="form-label-control" type="text" name="meters" step="0.01" min="1" [placeholder]="'e.g. 1.78'" requiredplaceholder="dosis" [(ngModel)]="createMedicine.dosis" name="dosis" />
+            </div>
+
+            <!-- Tipo de Dosis -->
+            <div class="divInput">
+                <label for="contenido" class="texto">Tipo de Dosis</label>
+                <select name="frecuencia" [(ngModel)]="createMedicine.idTipoDosis" id="">
             <option [value]="item.id" *ngFor="let item of tipoDosis">
               {{ item.nombre }}
             </option>
           </select>
-      </div>
+            </div>
 
-      <!-- Frecuencia -->
-      <div class="divInput">
-        <label for="contenido" class="texto">Frecuencia</label>
-        <input
-          class="form-label-control"
-          type="number"
-          placeholder="frecuencia"
-          [(ngModel)]="createMedicine.frecuencia"
-          name="frecuencia"
-        />
-      </div>
+            <!-- Frecuencia -->
+            <div class="divInput">
+                <label for="contenido" class="texto">Frecuencia</label>
+                <input class="form-label-control" type="number" placeholder="frecuencia" [(ngModel)]="createMedicine.frecuencia" name="frecuencia" />
+            </div>
 
-      <!-- Tipo de Frecuencia -->
-      <div class="divInput">
-        <label for="contenido" class="texto">Tipo de Frecuencia</label>
-        <select name="frecuencia" [(ngModel)]="createMedicine.idTipoFrecuencia" id="">
+            <!-- Tipo de Frecuencia -->
+            <div class="divInput">
+                <label for="contenido" class="texto">Tipo de Frecuencia</label>
+                <select name="frecuencia" [(ngModel)]="createMedicine.idTipoFrecuencia" id="">
           <option [value]="item.id" *ngFor="let item of tipoFrecuencias">
             {{ item.nombre }}
           </option>
         </select>
-      </div>
+            </div>
 
-      <button
-        type="submit"
-        value="Submit"
-        class="btn btn-primary btnC"
-        role="button"
-      >
+            <button type="submit" value="Submit" class="btn btn-primary btnC" role="button">
         Agregar
       </button>
 
-    </form>
-  </div>
+        </form>
+    </div>
 </div>
