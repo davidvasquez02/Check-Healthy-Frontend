@@ -59,11 +59,11 @@ const routes: Routes = [
         component: EnfermedadComponent,
       },
       {
-        path: 'control/:id/addMedicine',
+        path: 'control/:id/:eu/addMedicine',
         component: CreateMedicineComponent,
       },
       {
-        path: 'control/:id/addExam',
+        path: 'control/:id/:eu/addExam',
         component: CreateExamComponent,
       },
     ],
