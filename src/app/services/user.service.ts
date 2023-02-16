@@ -32,7 +32,7 @@ export class UserService {
   getUser(idUsuario: number):Observable<User>{
     let params = new HttpParams();
     params = params.append('idUsuario', idUsuario);
-    return this.http.get<any>(this.url + "/id/",{headers:this.httpHeaders, params:params});
+    return this.http.get<any>(this.url + "/id",{headers:this.httpHeaders, params:params});
   }
 
   updateUser(user: User):Observable<any>{

@@ -2,8 +2,7 @@
   <div class="profile">
     <div class="profile-f">
       <div class="img">
-        <img />
-        <!--*ngIf="user.foto != null" [src]="user.foto" class="imgP" />-->
+        <img *ngIf="user.foto != null" [src]="user.foto" class="imgP" />
         <img 
           src="https://img.freepik.com/vector-gratis/ilustracion-concepto-diabetes_114360-3670.jpg?w=826&t=st=1676363178~exp=1676363778~hmac=aca1a5c4b0ddf0427701f78ccb48387476af450d2a2b742e8a575dd349bec9b3"
           class="imgP"
@@ -11,20 +10,19 @@
       </div>
 
       <div>
-        <h1 class="title">Nombre Usuario</h1>
+        <h1 class="title">{{user.nombre}}</h1>
       </div>
 
       <div class="content">
         <div>
           <div class="field">
             <h5 class="cont">Correo</h5>
-            <p>user.correo</p>
+            <p>{{user.nombre}}</p>
           </div>
         </div>
 
         <div class="but">
-          <button class="btn btn-primary btnC">
-            <!--(click)="editMode = true"> -->
+          <button class="btn btn-primary btnC" (click)="editMode = true">
             <mat-icon class="icon">create</mat-icon>EDITAR PERFIL
           </button>
         </div>
@@ -33,7 +31,7 @@
   </div>
 </div>
 
-<!--<div class="field pad" ngIf="editMode">
+<div class="field pad" ngIf="editMode">
         <div class="img">
         <input type="file" class="form-control mar" name="" id="" />
         <img [src]="previsualization" class="previsualization imgP" />
@@ -73,4 +71,4 @@
             </div>
         </form>
         </div>
-  </div>-->
+  </div>
