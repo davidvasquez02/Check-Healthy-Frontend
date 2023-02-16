@@ -5,6 +5,8 @@ import { map, shareReplay } from 'rxjs/operators';
 import { Menu } from 'src/app/models/menu';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-nav',
@@ -19,10 +21,21 @@ export class NavComponent {
       shareReplay()
     );
 
+    user: User = new User();
+
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private router: Router
+    private router: Router,
+    private userService: UserService
   ) {}
+
+  ngOnInit(): void {
+    this.userService
+      .getUser(parseInt(sessionStorage.getItem('idUsuario')!))
+      .subscribe((response) => {
+        this.user = response;
+      });
+  }
 
   public menu: Menu[] = [
     { icono: 'perm_identity', nombre: 'perfil' },
