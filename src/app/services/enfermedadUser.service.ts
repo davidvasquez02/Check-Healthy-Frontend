@@ -26,4 +26,7 @@ export class EnfermedadUserService {
     return this.http.post<any>(this.url,create, {headers:this.httpHeaders});
   }
 
+  update(enfermedadUser:EnfermedadUser): Observable<EnfermedadUser> {
+    return this.http.put<EnfermedadUser>(this.url , enfermedadUser , {headers:this.httpHeaders});
+  }
 }

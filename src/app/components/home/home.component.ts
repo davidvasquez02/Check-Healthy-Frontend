@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EnfermedadUser } from 'src/app/models/enfermedadUser';
 import { EnfermedadUserService } from 'src/app/services/enfermedadUser.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ import { EnfermedadUserService } from 'src/app/services/enfermedadUser.service';
 export class HomeComponent implements OnInit {
 
   enfermedades: EnfermedadUser[] = [];
+  enfermedadUpdate: EnfermedadUser = new EnfermedadUser();
 
   constructor(
     public enfermedadUserService: EnfermedadUserService
@@ -32,6 +34,31 @@ export class HomeComponent implements OnInit {
 
       console.log(this.enfermedades);
     });
+  }
+
+  preguntaEnfermedad(e:EnfermedadUser){
+    Swal.fire({
+      title: 'Quieres habilitar seguimiento a esta enfermedad?',     
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.enfermedadUpdate = e;
+        this.enfermedadUpdate.padece=true;
+        this.enfermedadUserService.update(this.enfermedadUpdate).subscribe((response)=>{
+          console.log(response)
+        })
+        Swal.fire(
+          '!',
+          'Has activado el seguimiento!.',
+          'success'
+        )
+      }
+    })
+    
   }
 
 }
