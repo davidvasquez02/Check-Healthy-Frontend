@@ -11,7 +11,10 @@
                 <h2 class="font-weight-bold text-center title">Inicia Sesion</h2>
             </div>
 
-            <button class="btn btn-primary" (click)="iniciaSesion()" type="submit" role="button">Login</button>
+            <input class="form-control" type="text" placeholder="Email" [(ngModel)]="actualCredentials.correo" name="email" />
+
+            <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="actualCredentials.contrasena" name="password" />
+            <button class="btn btn-primary" type="submit" role="button">Login</button>
 
             <div>
                 <p>¿Aún no tienes una cuenta? Registrate aqui:</p>
