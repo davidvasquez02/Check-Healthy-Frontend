@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./grafica-examenes.component.css']
 })
 export class GraficaExamenesComponent {
-  title = 'chartAngular'
 
   chartData = [
     {

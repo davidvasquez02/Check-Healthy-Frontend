@@ -36,7 +36,7 @@
                   ></textarea>
                 </div>
                 <div>
-                  <button class="btn btn-primary btnC">
+                  <button class="btn btn-primary btnC" (click)="publicar(s.id)">
                     Publicar <mat-icon class="icon">upload</mat-icon>
                   </button>
                 </div>
@@ -57,14 +57,15 @@
                   </mat-card-content>
   
                   <mat-card-actions>
-                    <button
+                    <!-- <button
                       type="button"
+                      (click)="clickComentar(e.id)"
                       class="btn btn-primary btnC"
                       data-bs-toggle="modal"
                       data-bs-target="#commentModal"
                     >
                       <mat-icon class="icon">sms</mat-icon>Comentar
-                    </button>
+                    </button> -->
                   </mat-card-actions>
                   <mat-divider inset></mat-divider>
                 </mat-card>
@@ -124,7 +125,12 @@
           placeholder="comment"
           [(ngModel)]="createComentario.contenido"
         />
-        <button class="btn btn-danger btnS" type="button" id="button-addon2">
+        <button
+          class="btn btn-danger btnS"
+          type="button"
+          id="button-addon2"
+          (click)="creaComentario()"
+        >
           <mat-icon>send</mat-icon>
         </button>
       </div>

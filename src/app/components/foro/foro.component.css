@@ -10,8 +10,9 @@
   padding: 4%;
   min-width: 30%;
   height: 80%;
-  min-height: max-content;
+  min-height: 100%;
   max-width: 70%;
+  overflow: scroll;
 }
 .header-image {
   background-image: url("https://images.pexels.com/photos/35666/cooking-baby-only-kitchen.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");

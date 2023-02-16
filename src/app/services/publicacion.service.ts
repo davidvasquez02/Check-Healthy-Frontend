@@ -22,8 +22,8 @@ export class PublicacionService {
     return this.http.get<Publicacion[]>(this.url  +'/all', {headers:this.httpHeaders, params:params});
   }
 
-  create(create: CreatePublicacion): Observable<any>{
-    return this.http.post<any>(this.url,create, {headers:this.httpHeaders});
+  create(create: CreatePublicacion): Observable<Publicacion>{
+    return this.http.post<Publicacion>(this.url,create, {headers:this.httpHeaders});
   }
 
 }

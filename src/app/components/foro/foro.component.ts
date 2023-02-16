@@ -63,15 +63,6 @@ export class ForoComponent implements OnInit {
     });
   }
 
-  onTableDataChange(event: number) {
-    this.page = event;
-  }
-
-  onTableSizeChange(event: { target: { value: number } }): void {
-    this.tableSize = event.target.value;
-    this.page = 1;
-  }
-
   clickComentar(id: number): void {
     var date = new Date();
     var current_date =

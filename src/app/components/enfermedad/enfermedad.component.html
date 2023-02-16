@@ -1,53 +1,62 @@
 <div class="ill-page">
-    <div class="ill">
-        <div>
-            <h2 class="font-weight-bold text-center title">{{ tittle }}</h2>
+  <div class="ill">
+    <div>
+      <h2 class="font-weight-bold text-center title">{{ tittle }}</h2>
+    </div>
+    <mat-progress-bar value="0"></mat-progress-bar>
+    <div class="head">
+      <p class="texto">Rutina del Dia</p>
+      <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+      <table class="default">
+        <!-- <div  *ngFor="let d of dosisMedicamento">
+          <p>{{ d.nombre }}</p>
+          <p>{{ d.dosis }}{{ d.nombreTipoDosis }}</p>
+          <p>{{ d.fechaHora }}</p>
+          <mat-icon *ngIf="d.checkk">done</mat-icon>
+          <mat-icon *ngIf="!d.checkk">close</mat-icon>
         </div>
-        <mat-progress-bar value="0"></mat-progress-bar>
-        <div class="head">
-            <p class="texto">Rutina del Dia</p>
-            <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
-            <table class="default">
-                <div>aqui va el cuadrito</div>
-            </table>
-        </div>
-        <div class="head">
-            <p class="texto">Medicinas</p>
-            <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
-            <table class="default">
-                <tr>
-                    <th mat-sort-header="name">Nombre</th>
-                    <th mat-sort-header="frecuencia">Frecuencia</th>
-                    <th mat-sort-header="type">Dosis</th>
-                </tr>
-                <tr *ngFor="let m of medicamentos">
-                    <td>{{m.nombre}}</td>
-                    <td>{{m.frecuencia}} {{m.nombreTipoFrecuencia}}</td>
-                    <td>{{m.dosis}} {{m.nombreTipoDosis}}</td>
-                </tr>
-            </table>
-            <button class="btn btn-primary" [routerLink]="['addMedicine']">
+        <div  *ngFor="let t of tomaExamen">
+          <p></p>
+        </div> -->
+      </table>
+    </div>
+    <div class="head">
+      <p class="texto">Medicinas</p>
+      <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+      <table class="default">
+        <tr>
+          <th mat-sort-header="name">Nombre</th>
+          <th mat-sort-header="frecuencia">Frecuencia</th>
+          <th mat-sort-header="type">Dosis</th>
+        </tr>
+        <tr *ngFor="let m of medicamentos">
+          <td>{{ m.nombre }}</td>
+          <td>{{ m.frecuencia }} {{ m.nombreTipoFrecuencia }}</td>
+          <td>{{ m.dosis }} {{ m.nombreTipoDosis }}</td>
+        </tr>
+      </table>
+      <button class="btn btn-primary" [routerLink]="['addMedicine']">
         Agregar Medicamento
       </button>
-        </div>
-        <div class="head">
-            <p class="texto">Examenes</p>
-            <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
-            <table class="default">
-                <tr>
-                    <th mat-sort-header="name">Nombre</th>
-                    <th mat-sort-header="frecuencia">Frecuencia</th>
-                    <th mat-sort-header="type">Dosis</th>
-                </tr>
-                <tr *ngFor="let e of examenes">
-                    <td>{{e.nombre}}</td>
-                    <td>{{e.frecuencia}} {{e.nombreTipoFrecuencia}}</td>
-                    <td>{{e.medida}} {{e.nombreTipoMedida}}</td>
-                </tr>
-            </table>
-            <button class="btn btn-primary" [routerLink]="['addExam']">
+    </div>
+    <div class="head">
+      <p class="texto">Examenes</p>
+      <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+      <table class="default">
+        <tr>
+          <th mat-sort-header="name">Nombre</th>
+          <th mat-sort-header="frecuencia">Frecuencia</th>
+          <th mat-sort-header="type">Dosis</th>
+        </tr>
+        <tr *ngFor="let e of examenes">
+          <td>{{ e.nombre }}</td>
+          <td>{{ e.frecuencia }} {{ e.nombreTipoFrecuencia }}</td>
+          <td>{{ e.medida }} {{ e.nombreTipoMedida }}</td>
+        </tr>
+      </table>
+      <button class="btn btn-primary" [routerLink]="['addExam']">
         Agregar Examen
       </button>
-        </div>
     </div>
+  </div>
 </div>
