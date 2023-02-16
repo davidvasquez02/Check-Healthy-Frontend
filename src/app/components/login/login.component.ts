@@ -35,7 +35,8 @@ export class LoginComponent {
     this.userService
       .validateUser(
         this.actualCredentials.correo,
-        this.actualCredentials.contrasena
+        this.actualCredentials.contrasena,
+        localStorage.getItem('token')!
       )
       .subscribe((response) => {
         this.user = response;

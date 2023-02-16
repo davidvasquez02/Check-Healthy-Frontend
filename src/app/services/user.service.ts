@@ -18,10 +18,11 @@ export class UserService {
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
 
-  validateUser(correo: string , contraseña:string):Observable<User>{
+  validateUser(correo: string , contraseña:string, token:string):Observable<User>{
     let params = new HttpParams();
     params = params.append('correo', correo);
     params = params.append('contraseña', contraseña);
+    params = params.append('token', token)
     return this.http.get<User>(this.url + "/inicioSesion",{headers:this.httpHeaders, params:params});
   }
 

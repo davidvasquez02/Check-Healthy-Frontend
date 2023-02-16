@@ -76,6 +76,9 @@ export class RegiterComponent {
   }
 
   getToken() {
-    this.afMessaging.getToken.subscribe((res) => console.log('Token: ', res));
+    this.afMessaging.getToken.subscribe((res) => {
+      console.log('Token: ', res)
+      localStorage.setItem("token",res!);
+    });
   }
 }
