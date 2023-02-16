@@ -1,0 +1,26 @@
+.notify-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notify {
+  border-radius: 15px;
+  background-color: whitesmoke;
+  padding: 4%;
+  min-width: 30%;
+  height: 80%;
+  min-height: max-content;
+  max-width: 70%;
+}
+::ng-deep .mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color: rgb(154, 170, 184) !important;
+  border-radius: 15px;
+}
+
+a{
+  color:rgb(59, 192, 209) !important;
+}
+.col{
+  margin: 2%;
+}

@@ -22,6 +22,12 @@ export class MedicamentoUserService {
     return this.http.get<MedicamentoUsuario[]>(this.url  +'/id', {headers:this.httpHeaders, params:params});
   }
 
+  getNotify(idUsuario:number): Observable<MedicamentoUsuario[]> {
+    let params = new HttpParams();
+    params = params.append('idUsuario', idUsuario);
+    return this.http.get<MedicamentoUsuario[]>(this.url  +'/idUsuario', {headers:this.httpHeaders, params:params});
+  }
+
   create(create: CreatePublicacion): Observable<any>{
     return this.http.post<any>(this.url,create, {headers:this.httpHeaders});
   }

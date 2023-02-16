@@ -1,23 +1,23 @@
-<div class="profile-page">
+<div class="profile-page" *ngIf="!editMode">
   <div class="profile">
     <div class="profile-f">
       <div class="img">
         <img *ngIf="user.foto != null" [src]="user.foto" class="imgP" />
-        <img 
+        <img
           src="https://img.freepik.com/vector-gratis/ilustracion-concepto-diabetes_114360-3670.jpg?w=826&t=st=1676363178~exp=1676363778~hmac=aca1a5c4b0ddf0427701f78ccb48387476af450d2a2b742e8a575dd349bec9b3"
           class="imgP"
         />
       </div>
 
       <div>
-        <h1 class="title">{{user.nombre}}</h1>
+        <h1 class="title">{{ user.nombre }}</h1>
       </div>
 
       <div class="content">
         <div>
           <div class="field">
             <h5 class="cont">Correo</h5>
-            <p>{{user.nombre}}</p>
+            <p>{{ user.correo }}</p>
           </div>
         </div>
 
@@ -31,44 +31,37 @@
   </div>
 </div>
 
-<div class="field pad" ngIf="editMode">
-        <div class="img">
-        <input type="file" class="form-control mar" name="" id="" />
-        <img [src]="previsualization" class="previsualization imgP" />
-        </div>
+<div class="profile-page" *ngIf="editMode">
+  <div class="profile">
+    <div class="profile-f">
+      <div>
+        <h1 class="title">Edita tus datos</h1>
+      </div>
 
-        <div class="content">
-        <div>
-            <h1 class="title">Edita tus datos</h1>
+      <form appearance="fill" fxFlexFill>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Nombre"
+          [(ngModel)]="user.nombre"
+          name="Nombre"
+        />
+        <input
+          class="form-control"
+          type="password"
+          placeholder="Contraseña"
+          [(ngModel)]="user.contrasena"
+          name="Contraseña"
+        />
+        <div class="but">
+          <button class="btn btn-primary btnC" (click)="editUser()">
+            Guardar<mat-icon class="icon">check</mat-icon>
+          </button>
+          <button class="btn btn-secondary btnC" (click)="closeEditUser()">
+            Cancelar<mat-icon class="icon">close</mat-icon>
+          </button>
         </div>
-
-        <form appearance="fill" fxFlexFill>
-            <input
-            class="form-control"
-            type="text"
-            placeholder="Nombre"
-            name="Nombre"
-            />
-            <input
-            class="form-control"
-            type="password"
-            placeholder="Contraseña"
-            name="Contraseña"
-            />
-            <input
-            class="form-control"
-            type="email"
-            placeholder="Email"
-            name="Email"
-            />
-            <div class="but">
-            <button class="btn btn-success btnC" (click)="editUser()">
-                Guardar<mat-icon>check</mat-icon>
-            </button>
-            <button class="btn btn-danger btnC">
-                Cancelar<mat-icon>close</mat-icon>
-            </button>
-            </div>
-        </form>
-        </div>
+      </form>
+    </div>
   </div>
+</div>

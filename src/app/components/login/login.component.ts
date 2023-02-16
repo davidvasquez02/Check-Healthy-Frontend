@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFireMessaging } from '@angular/fire/compat/messaging';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
@@ -18,7 +19,10 @@ export class LoginComponent {
 
   private user: User = new User();
 
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(
+    private router: Router,
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {
     sessionStorage.clear();
@@ -50,7 +54,6 @@ export class LoginComponent {
     console.log(this.actualCredentials.correo);
     console.log(userInfo);
     console.log(this.actualCredentials);
-
 
     if (userInfo === null) {
       return false;

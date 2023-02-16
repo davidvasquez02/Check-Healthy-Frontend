@@ -14,7 +14,7 @@
           src="https://img.freepik.com/vector-gratis/ilustracion-concepto-diabetes_114360-3670.jpg?w=826&t=st=1676363178~exp=1676363778~hmac=aca1a5c4b0ddf0427701f78ccb48387476af450d2a2b742e8a575dd349bec9b3"
           class="imgP"
         />
-        <p class="title">Nombre Usuario</p>
+        <p class="title">{{user.nombre}}</p>
       </div>
       <a
         class="menu"
@@ -24,6 +24,11 @@
       >
         <mat-icon> {{ item.icono }} </mat-icon>
         {{ item.nombre | titlecase }}
+      </a>
+
+      <a class="menu" mat-list-item (click)="signOut()">
+        <mat-icon>keyboard_tab</mat-icon>
+        Cerrar Sesion
       </a>
     </mat-nav-list>
   </mat-sidenav>
