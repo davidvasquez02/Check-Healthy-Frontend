@@ -55,7 +55,7 @@ const routes: Routes = [
         component: ForoComponent,
       },
       {
-        path: 'control/:id/:nE',
+        path: 'control/:id',
         component: EnfermedadComponent,
       },
       {
