@@ -12,19 +12,23 @@
             <div class="card">
             <h5 class="card-header title">{{ d.nombre }}</h5>
             <div class="card-body">
-                <p class="card-text">Fecha y Hora:{{ d.dosis }}</p>
-                <a>¡Hecho!</a>
+                <p class="card-text">Dosis:{{ d.dosis }} {{ d.nombreTipoDosis}}</p>
+                <p class="card-text">Fecha y Hora:{{ d.fechaHora }}</p>
+                <button class="btn-primary" *ngIf="d.checkk">¡Hecho!</button>
+                <button class="btn-secondary" *ngIf="!d.checkk" (click)="setCheckkDosis(d.id)">¡Pendiente!</button>
             </div>
             </div>
         </div>
         </div>
-        <div class="col" *ngFor="let t of tomaExamenes">
+        <div class="col" *ngFor="let t of tomaExamen">
           <div>
               <div class="card">
               <h5 class="card-header title">{{ t.nombre }}</h5>
               <div class="card-body">
-                  <p class="card-text">Fecha y Hora:{{ t.medida }}</p>
-                  <a>¡Hecho!</a>
+                  <p class="card-text">Media:{{ t.medida }} {{ t.nombreTipoMedida }}</p>
+                  <p class="card-text">Fecha y Hora:{{ t.fechaHora }}</p>
+                  <button class="btn-primary" *ngIf="t.checkk">¡Hecho!</button>
+                  <button class="btn-secondary" *ngIf="!t.checkk" (click)="setCheckkExa(t.id)">¡Pendiente!</button>
               </div>
               </div>
           </div>

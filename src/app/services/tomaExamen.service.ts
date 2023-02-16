@@ -20,4 +20,10 @@ export class TomaExaService {
     params = params.append('idUser', idUsuario);
     return this.http.get<TomaExamen[]>(this.url+'/allBefore', {headers:this.httpHeaders, params:params});
   }
+
+  setCheck(tomaExamen: TomaExamen): Observable<TomaExamen> {
+    return this.http.put<TomaExamen>(this.url, tomaExamen,{
+      headers: this.httpHeaders
+    });
+  }
 }

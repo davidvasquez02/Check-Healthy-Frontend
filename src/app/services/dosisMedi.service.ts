@@ -37,4 +37,10 @@ export class DosisMediService {
       params: params,
     });
   }
+
+  setCheck(dosisMedicamento: DosisMedicamento): Observable<DosisMedicamento> {
+    return this.http.put<DosisMedicamento>(this.url, dosisMedicamento,{
+      headers: this.httpHeaders
+    });
+  }
 }

@@ -12,6 +12,7 @@
   height: 80%;
   min-height: max-content;
   max-width: 70%;
+  overflow: scroll;
 }
 ::ng-deep .mat-mdc-progress-bar {
   --mdc-linear-progress-active-indicator-color: rgb(154, 170, 184) !important;
@@ -22,5 +23,8 @@ a{
   color:rgb(59, 192, 209) !important;
 }
 .col{
+  margin: 2%;
+}
+p{
   margin: 2%;
 }
