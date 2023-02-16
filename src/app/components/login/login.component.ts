@@ -48,6 +48,7 @@ export class LoginComponent {
   private validate(userInfo: User): Boolean {
     console.log(this.actualCredentials.correo);
     console.log(userInfo);
+    console.log(this.actualCredentials);
 
     if (userInfo === null) {
       return false;
