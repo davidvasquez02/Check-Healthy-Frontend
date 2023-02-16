@@ -1,13 +1,15 @@
 export class addExam {
 
     constructor(
+
+        public idEnfermedadUsuario:number,
         public nombre: string,
-        public dosis: string,
+        public idTipoFrecuencia:number,
+        public idTipoMedida:number,
+        public medida: string,
         public frecuencia: number,
-        public tipoFrecuencia: number,
-        public hora: string,
         public fechaInicio: string, 
-        public fechaFin: string, 
+        public fechaFin: string,
 
     ){}
 

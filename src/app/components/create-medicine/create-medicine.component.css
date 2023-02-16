@@ -9,7 +9,7 @@
 .addMed {
   border-radius: 15px;
   min-height: 80%;
-  min-width: 60%;
+  min-width: 40%;
   background-color: whitesmoke;
   padding: 6%;
 }
@@ -23,9 +23,29 @@
   font-weight: bold;
   margin-bottom: 5px;
   color: var(--text-color-main);
+  align-self: self-start;
+  padding-left: 4%;
+}
+
+.form-label-control {
+  margin: 3%;
+  width: 100%;
 }
 
 ::ng-deep .mat-mdc-progress-bar {
-    --mdc-linear-progress-active-indicator-color: rgb(154, 170, 184) !important;
-    border-radius: 15px;
-  }
+  --mdc-linear-progress-active-indicator-color: rgb(154, 170, 184) !important;
+  border-radius: 15px;
+}
+.divInput {
+  width: 100%;
+}
+.lab {
+  align-self: self-start;
+}
+.btnC {
+  margin: 4%;
+}
+select {
+  word-wrap: normal;
+  width: 100%;
+}

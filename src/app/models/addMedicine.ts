@@ -1,13 +1,15 @@
 export class addMedicine {
 
     constructor(
-        
+
+        public idEnfermedadUsuario:number,
         public nombre: string,
+        public idTipoFrecuencia:number,
+        public idTipoDosis:number,
         public dosis: string,
-        public periodicidad: number,
-        public hora: string,
+        public frecuencia: number,
         public fechaInicio: string, 
-        public fechaFin: string, 
+        public fechaFin: string,
 
     ){}
 

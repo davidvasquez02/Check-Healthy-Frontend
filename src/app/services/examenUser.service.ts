@@ -2,9 +2,8 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
-import { CreatePublicacion } from '../models/createPublicacion';
+import { addExam } from '../models/addExam';
 import { ExamenUsuario } from '../models/examenUsuario';
-import { MedicamentoUsuario } from '../models/medicamentoUsuario';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +22,7 @@ export class ExamenUserService {
     return this.http.get<ExamenUsuario[]>(this.url  +'/id', {headers:this.httpHeaders, params:params});
   }
 
-  create(create: CreatePublicacion): Observable<any>{
+  create(create: addExam): Observable<any>{
     return this.http.post<any>(this.url,create, {headers:this.httpHeaders});
   }
 

@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
-import { CreatePublicacion } from '../models/createPublicacion';
+import { addMedicine } from '../models/addMedicine';
 import { MedicamentoUsuario } from '../models/medicamentoUsuario';
 
 @Injectable({
@@ -28,7 +28,7 @@ export class MedicamentoUserService {
     return this.http.get<MedicamentoUsuario[]>(this.url  +'/idUsuario', {headers:this.httpHeaders, params:params});
   }
 
-  create(create: CreatePublicacion): Observable<any>{
+  create(create: addMedicine): Observable<any>{
     return this.http.post<any>(this.url,create, {headers:this.httpHeaders});
   }
 

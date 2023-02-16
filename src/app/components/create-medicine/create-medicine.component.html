@@ -9,7 +9,7 @@
       value="100"
     ></mat-progress-bar>
 
-    <form class="add-form" appearance="fill" fxFlexFill>
+    <form class="add-form" (submit)="agregarMedicamento()" appearance="fill" fxFlexFill>
       <!-- nombre -->
       <input
         class="form-control"
@@ -34,7 +34,7 @@
 
       <!--fecha Fin  -->
       <div class="divInput">
-        <label for="fechaInicio" class="texto">Fecha Hora Final</label>
+        <label for="fechaFinal" class="lab texto">Fecha Hora Final</label>
         <input
           class="form-label-control"
           type="date"
@@ -45,7 +45,7 @@
         />
       </div>
 
-      <!-- altura -->
+      <!-- Dosis -->
       <div class="divInput">
         <label for="contenido" class="texto">Dosis</label>
         <input
@@ -57,32 +57,40 @@
           [placeholder]="'e.g. 1.78'"
           requiredplaceholder="dosis"
           [(ngModel)]="createMedicine.dosis"
-          name="Altura"
+          name="dosis"
         />
       </div>
 
-      <!-- peso -->
+      <!-- Tipo de Dosis -->
+      <div class="divInput">
+        <label for="contenido" class="texto">Tipo de Dosis</label>
+        <select name="frecuencia" [(ngModel)]="createMedicine.idTipoDosis" id="">
+            <option [value]="item.id" *ngFor="let item of tipoDosis">
+              {{ item.nombre }}
+            </option>
+          </select>
+      </div>
+
+      <!-- Frecuencia -->
       <div class="divInput">
         <label for="contenido" class="texto">Frecuencia</label>
         <input
           class="form-label-control"
           type="number"
-          placeholder="Peso"
-          [(ngModel)]="createMedicine.periodicidad"
-          name="periodicidad"
+          placeholder="frecuencia"
+          [(ngModel)]="createMedicine.frecuencia"
+          name="frecuencia"
         />
       </div>
 
-      <!-- hora -->
+      <!-- Tipo de Frecuencia -->
       <div class="divInput">
         <label for="contenido" class="texto">Tipo de Frecuencia</label>
-        <input
-          class="form-label-control"
-          type="number"
-          placeholder="Hora"
-          [(ngModel)]="createMedicine.hora"
-          name="hora"
-        />
+        <select name="frecuencia" [(ngModel)]="createMedicine.idTipoFrecuencia" id="">
+          <option [value]="item.id" *ngFor="let item of tipoFrecuencias">
+            {{ item.nombre }}
+          </option>
+        </select>
       </div>
 
       <button
