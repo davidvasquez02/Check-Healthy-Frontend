@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { Notificaciones } from 'src/app/models/notificaciones';
-import { NotificacionService } from 'src/app/services/notificacion.service';
+import { DosisMedicamento } from 'src/app/models/dosisMedicamento';
+import { TomaExamen } from 'src/app/models/tomaExamen';
+import { ExamenUserService } from 'src/app/services/examenUser.service';
+import { MedicamentoUserService } from 'src/app/services/medicamentoUser.service';
 
 @Component({
   selector: 'app-notificaciones',
@@ -8,20 +10,23 @@ import { NotificacionService } from 'src/app/services/notificacion.service';
   styleUrls: ['./notificaciones.component.css'],
 })
 export class NotificacionesComponent {
-  public notificaciones: Notificaciones[] = [
-    {
-      id: 1,
-      titulo: 'Medicina',
-      fechaHora: 'hoy a las 5',
-      descripcion: 'tomarla',
-    },
-    {
-      id: 2,
-      titulo: 'Medicina',
-      fechaHora: 'hoy a las 7',
-      descripcion: 'tomarla',
-    },
-  ];
 
-  constructor(public notificacionService: NotificacionService) {}
+  dosisMedicamento: DosisMedicamento[] = [];
+  tomaExamenes: TomaExamen[] = [];
+  constructor(private medicamentoService: MedicamentoUserService,
+    private examenService: ExamenUserService) {}
+
+    ngOnInit(): void {
+  
+      // this.medicamentoService.getNotify(parseInt(sessionStorage.getItem('idUsuario')!)).subscribe((response) => {
+      //   this.medicamentos = response;
+      //   console.log(response);
+      // });
+  
+      // this.examenService.getNotify(parseInt(sessionStorage.getItem('idUsuario')!)).subscribe((response) => {
+      //   this.examenes = response;
+      //   console.log(response);
+      // });
+  
+    }
 }

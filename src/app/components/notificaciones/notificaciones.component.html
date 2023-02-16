@@ -7,17 +7,28 @@
     <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
 
     <div class="row row-cols-1">
-        <div class="col" *ngFor="let n of notificaciones">
+        <div class="col" *ngFor="let d of dosisMedicamento">
         <div>
             <div class="card">
-            <h5 class="card-header title">{{ n.titulo }}</h5>
+            <h5 class="card-header title">{{ d.nombre }}</h5>
             <div class="card-body">
-                <p class="card-text">Fecha y Hora:{{ n.fechaHora }}</p>
+                <p class="card-text">Fecha y Hora:{{ d.dosis }}</p>
                 <a>¡Hecho!</a>
             </div>
             </div>
         </div>
         </div>
+        <div class="col" *ngFor="let t of tomaExamenes">
+          <div>
+              <div class="card">
+              <h5 class="card-header title">{{ t.nombre }}</h5>
+              <div class="card-body">
+                  <p class="card-text">Fecha y Hora:{{ t.medida }}</p>
+                  <a>¡Hecho!</a>
+              </div>
+              </div>
+          </div>
+          </div>
   </div>
   </div>
 </div>
